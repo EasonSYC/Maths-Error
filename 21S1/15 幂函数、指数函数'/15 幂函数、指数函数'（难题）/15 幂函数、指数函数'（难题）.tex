@@ -1,0 +1,88 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usetikzlibrary{fit}
+\usepackage{xcolor}
+\usepackage{longtable}
+
+\graphicspath{ {./images/} }
+
+\newcommand\addvmargin[1]{
+  \node[fit=(current bounding box),inner ysep=#1,inner xsep=0]{};
+}
+
+\setlength{\tabcolsep}{5mm} % separator between columns
+\def\arraystretch{1.25} % vertical stretch factor
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{15 幂函数、指数函数'（难题）}
+\date{2021年12月29日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=\arabic*.]
+		\item 函数$y=f(x)$为$\mathbb{R}$上的偶函数, 且对于任意实数$x$都有$f(x+1)=f(x-1)$成立. 当$x\in [1, 2]$时, $f(x)=2^x$, 求$x\in[2k-1, 2k+1] (k\text{为整数})$时$y=f(x)$的解析式为?.
+			~\\
+
+			有$f(x+1)=f(x-1)$, 即$f(x)=f(x+2)$, 故有
+
+			$$\forall x\in [2k-1, 2k+1] (k\in \mathbb{Z}), f(x) = f(x-2k), x-2k \in [-1, 1].$$
+
+			考虑$x\in [-1, 0]$, 有$x+2 \in [1, 2]$, $f(x) = f(x+2) = 2^{x+2}$.
+
+			考虑$x\in (0, 1]$, 有$-x \in [-1, 0)$, $f(x) = f(-x) = 2^{-x+2}$.
+
+			考虑$x\in [2k-1, 2k]$, 有$x-2k \in [-1, 0]$, $f(x)=f(x-2k)=2^{x-2k+2}$.
+
+			考虑$x\in (2k, 2k+1]$, 有$x-2k \in (0, 1]$, $f(x)=f(x-2k)=2^{-x+2k+2}$.
+
+			故
+
+			$$f(x)=\left\{\begin{array}{rl}2^{x-2k+2}, &x\in [2k-1, 2k],\\ 2^{-x+2k+2}, &x\in (2k, 2k+1].\end{array}\right.$$
+
+		~\\
+
+		\item 已知$a>0, a\neq 1$, 试求使方程$$\log_{a} (x-ak) = \log_{a^2} (x^2 - a^2)$$有解的$k$的取值范围.
+			~\\
+
+			由对数函数的性质, 易得
+
+			\begin{align*}
+				(x-ak)^2 &= x^2 - a^2 \tag{$2-1$}\\
+				x-ak &> 0 \tag{$2-2$}\\
+				x^2 - a^2 &> 0 \tag{$2-3$}
+			\end{align*}
+
+			显然, $(2-1)$ $(2-2)$ $\Rightarrow$ $(2-3)$, 故只需解 $(2-1)$ $(2-2)$ 即可.
+
+			$(2-1)$ 等价于
+
+			$$2kx=a(1+k^2). \eqno{(2-4)}$$
+
+			当$k=0$, $(2-4)$ 显然无解, 即原方程无解.
+
+			故$k \neq 0$, $(2-4)$ 的解为
+
+			$$x=\frac{a(1+k^2)}{2k}. \eqno{(2-5)}$$
+
+			$(2-5)$ $(2-2)$ 联立, 有
+
+			$$\frac{1+k^2}{2k} > k \Rightarrow k\in(-\infty, -1)\cup(0, 1).$$
+
+	\end{enumerate}
+
+\end{document}
