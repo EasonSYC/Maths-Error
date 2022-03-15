@@ -1,0 +1,84 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{13 函数综合'（简单题）}
+\date{2021年12月15日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=\arabic*.]
+		\item 设定义在$\mathbb{R}$上的偶函数$f(x)$满足$f(x)=-f(2-x), f(0)=2$, 则$f(0)+f(1)+f(2)+f(3)+\cdots+f(2020)+f(2021)=$?.
+			~\\
+
+			$$f(x)=-f(2-x), f(-x)=f(x) \Rightarrow f(x)=-f(x-2) \Rightarrow f(x)=-f(x+2) \Rightarrow f(x)=f(x+4).$$
+
+			$$f(1)=-f(1) \Rightarrow f(1)=0, f(2)=-f(0)=-2, f(3)=-f(1)=0, f(4)=f(0)=2.$$
+
+			\begin{align*}
+				\text{原式} &= f(0)+f(1)+f(2)+f(3)+\cdots+f(2020)+f(2021)\\
+				&= [f(0)+f(1)+f(2)+f(3)] + \cdots + [f(2016)+f(2017)+f(2018)+f(2019)] + f(2020) + f(2021)\\
+				&= 0 + \cdots + 0 + 2 + 0\\
+				&= 2.
+			\end{align*}
+
+		~\\
+
+		\item 已知函数$$f(x)=\left\{\begin{array}{rl}\sqrt{4-x^2}, &x\in(-2, 2],\\2-|x-3|, &x\in(2, 4],\end{array}\right.$$且$f(x-3)=f(x+3)$,
+			\begin{enumerate}[label=(\arabic*)]
+				\item 求$f(-8)$, 并求$x\in [-8, -2]$时$f(x)$的解析式.
+					~\\
+
+					易得$f(x)=f(x+6)$, 有$f(-8)=f(-2)=f(4)=1.$
+
+					考虑$x\in(-8, -4], x+6\in(-2, 2]$, $f(x)=f(x+6)=\sqrt{-x^2-12x-34};$
+
+					考虑$x\in(-4, -2], x+6\in(2, 4]$, $f(x)=f(x+6)=2-|x+6-3|=2-|x+3|;$
+
+					故
+
+					$$f(x)=\left\{
+					\begin{array}{rl}
+					1, &x=-8,\\
+					\sqrt{-x^2-12x-32}, &x\in(-8, -4],\\
+					x+5, &x\in(-4, -3],\\
+					-x-1, &x\in(-3, -2].\\
+					\end{array}
+					\right.$$
+
+				~\\
+
+				\item 函数$y=f(x)-k, x\in[-8, 4]$的零点个数是否可能为奇数? 若可能, 则求出此时零点个数, 并指出相应的实数$k$的取值范围; 若不可能, 则说明理由.
+					~\\
+
+					$x \in (-8, -2]$的图像由$x\in (-2, 4]$的图像平移得来, 故直线$y=k$与$y=f(x), x\in(-8, 4]$的图像交点必为偶数个.
+
+					故若交点为奇数, 必有$y=k=f(-8)=1$.
+
+					此时共有$7$个零点: $x=-8$, 1个; $x\in (-8, -4]$, 2个; $x\in(-4, -3]$, 0个; $x\in(-3, -2]$, 1个; $x\in (-2, 2]$, 2个, $x\in (2, 3]$, 0个; $x\in (3, 4]$, 1个.
+
+			\end{enumerate}
+
+	\end{enumerate}
+
+\end{document}
