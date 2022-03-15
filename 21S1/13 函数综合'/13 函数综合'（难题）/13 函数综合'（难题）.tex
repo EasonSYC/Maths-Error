@@ -1,0 +1,175 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{13 函数综合'（难题）}
+\date{2021年12月15日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=\arabic*.]
+		\item 称满足以下条件的函数$f(x)$为$P_k$函数: 从定义域$D$中任取$x$, 总存在唯一的$y_0 \in D$满足$f(x) + f(y_0) = 2k (k\in\mathbb{R})$. 根据该定义, 以下命题中所有真命题的序号为?.
+			\begin{enumerate}[label=(\arabic*)]
+				\item 若$f(x), x\in D$是$P_0$函数, 则$\forall x\in D: -x\in D$.
+					~\\
+
+					错误. 考虑$f(x)=0, x\in \{1\}.$ 显然$f(x)$是$P_0$函数, 但$1\in D, -1 \notin D$. 事实上, $P$性质与定义域无必然联系, 但和值域$R$有必然联系: $\forall x\in R: 2k-x \in R$是函数$y=f(x), x\in D$为$P_k$函数的必要条件.
+
+				~\\
+
+				\item $y=\dfrac{1-4x}{2x-3}$是$P_{-2}$函数.
+					~\\
+
+					正确.
+
+					$$\begin{tikzpicture}[scale=0.7, baseline=0]
+			    		\draw[black, ->] (-3.5,  0)--( 6.5,  0);
+			    		\draw[black, ->] ( 0, -7)--( 0,  3);
+			    		\draw[black, domain=-3:1] plot(\x, {(1-4*\x)/(2*\x-3)});
+			    		\draw[black, domain=2:6] plot(\x, {(1-4*\x)/(2*\x-3)}) node[right] {$y=\dfrac{1-4x}{2x-3}$};
+			    		\draw[black, dashed] (1.5, -6)--(1.5, 2);
+			    		\draw[black, dashed] (-3, -2)--(6, -2) node[above] {$y=-2$};
+			    	\end{tikzpicture}
+			    	$$
+
+		    	~\\
+
+		    	\item $y=\dfrac{2x^2+2x+1}{x}$是$P_2$函数.
+		    		~\\
+
+		    		错误. 显然可化简为$y=2x+2+\dfrac{1}{x}$,
+
+					$$\begin{tikzpicture}[scale=0.7, baseline=0]
+			    		\draw[black, ->] (-6,  0)--( 6,  0);
+			    		\draw[black, ->] ( 0, -3)--( 0,  7);
+			    		\draw[black, domain=-3:-0.25, samples=1000] plot(\x, {2*\x+2+1/\x});
+			    		\draw[black, domain=0.25:3, samples=1000] plot(\x, {2*\x+2+1/\x}) node[right] {$y=\dfrac{2x^2+2x+1}{x}$};
+			    		\draw[black, dashed] (-5, 2)--(5, 2) node[below] {$y=2$};
+			    	\end{tikzpicture}
+			    	$$
+
+			    	显然存在一个$y$对应两个$x$, 故不存在唯一的$y_0$.
+
+		    	~\\
+
+		    	\item $y=|x-2|-|x+2|+2$是$P_1$函数.
+		    		~\\
+
+		    		错误.
+
+					$$\begin{tikzpicture}[scale=0.7, baseline=0]
+			    		\draw[black, ->] (-6,  0)--( 6,  0);
+			    		\draw[black, ->] ( 0, -3)--( 0,  7);
+			    		\draw[black] (-5, 6)--(-2, 6)--(2, -2)--(5, -2) node[right] {$y=|x-2|-|x+2|+2$};
+			    	\end{tikzpicture}
+			    	$$
+
+		    		显然存在一个$y$对应多个$x$, 故不存在唯一的$y_0$.
+
+	    		~\\
+
+	    		\item 若$y=x+\dfrac{3}{x}, x\in(-\infty, -a)\cup(a, +\infty)$为$P_0$函数, 则$a\geq \sqrt{3}$.
+	    			~\\
+
+	    			正确.
+
+					$$\begin{tikzpicture}[scale=0.7, baseline=0]
+			    		\draw[black, ->] (-6,  0)--( 6,  0);
+			    		\draw[black, ->] ( 0, -6)--( 0,  6);
+			    		\draw[black, domain=-5:-0.6, samples=1000] plot(\x, {\x+3/\x});
+			    		\draw[black, domain=0.6:5, samples=1000] plot(\x, {\x+3/\x}) node[right] {$y=x+\dfrac{3}{x}$};
+			    		\filldraw[black] ({sqrt(3)}, {2*sqrt(3)}) circle(0.1em) node[anchor=north west] {$(\sqrt{3}, 2\sqrt{3})$};
+			    		\filldraw[black] ({-sqrt(3)}, {-2*sqrt(3)}) circle(0.1em) node[anchor=south east] {$(-\sqrt{3}, -2\sqrt{3})$};
+			    	\end{tikzpicture}
+			    	$$
+
+			\end{enumerate}
+
+			事实上, 函数$y=f(x), x\in D$为$P_k$函数的充要条件是$f(D)$关于$k$对称且$y=f(x)$在$D$上存在反函数.
+
+		~\\
+
+		\item 已知函数$$f(x)=\left\{\begin{array}{rl}x+2, &x<0,\\x^2+\dfrac{1}{2}x, &x\geq 0,\end{array}\right.$$讨论方程$f(f(x))=t (t\in\mathbb{R})$的解的个数.
+			~\\
+
+			\textbf{法一: 暴力复合}
+
+			考虑$x<-2<0$, 有$f(x)=x+2<0$, 故$f(f(x))=f(x+2)=x+4$.
+
+			考虑$-2\leq x<0$, 有$f(x)=x+2\geq 0$, 故$f(f(x))=f(x+2)=x^2+\dfrac{9}{2}x+5$.
+
+			考虑$-2<0\leq x$, 有$f(x)=x^2+\dfrac{1}{2}x>0$, 故$f(f(x))=f\left(x^2+\dfrac{1}{2}x\right)=x^4 + x^3 + \dfrac{1}{4}x^2 + \dfrac{1}{2}x^2 + \dfrac{1}{4} x=x^4+x^3+\dfrac{3}{4}x^2+\dfrac{1}{4}x.$
+
+			故有
+
+			$$f(f(x))=\left\{\begin{array}{rl}x+4,&x<-2,\\x^2+\dfrac{9}{2}x+5,&-2\leq x<0,\\x^4+x^3+\dfrac{3}{4}x^2+\dfrac{1}{4}x,&x\geq 0.\end{array}\right.$$
+
+			绘制$y=f(f(x))$的图像如下图:
+
+			$$\begin{tikzpicture}[scale=0.7, baseline=0]
+	    		\draw[black, ->] (-6,  0)--( 6,  0);
+	    		\draw[black, ->] ( 0, -6)--( 0,  6);
+	    		\draw[black, domain=-5:-2, samples=1000] plot(\x, {\x+4});
+	    		\draw[black, domain=-2:0, samples=1000] plot(\x, {\x*\x+9/2*\x+5});
+	    		\draw[black, domain=0:1.25, samples=1000] plot(\x, {\x*\x*\x*\x+\x*\x*\x+3/4*\x*\x+1/4*\x}) node[right] {$y=f(f(x))$};
+	    		\filldraw[black] (-4, 0) circle (0.2em) node[anchor=south east] {$(-4, 0)$};
+	    		\draw[black] (-2, 2) circle (0.2em) node[anchor=south east] {$(-2, 2)$};
+	    		\filldraw[black] (-2, 0) circle (0.2em) node[anchor=north west] {$(-2, 0)$};
+	    		\draw[black] (0, 5) circle (0.2em) node[anchor=south east] {$(0, 5)$};
+	    		\filldraw[black] (0, 0) circle (0.2em) node[anchor=south east] {$(0, 0)$};
+	    	\end{tikzpicture}
+	    	$$
+
+	    	故 $t\in(-\infty, 0)\cup[5, +\infty)$, 1解; $t\in[2, 5)$, 2解; $t\in[0, 2)$, 3解.
+
+	    	\textbf{法二: 先考虑外函数的解, 后考虑内函数的解}
+
+	    	$$\begin{tikzpicture}[scale=0.7, baseline=0]
+	    		\draw[black, ->] (-6,  0)--( 6,  0);
+	    		\draw[black, ->] ( 0, -6)--( 0,  6);
+	    		\draw[black, domain=-5:0, samples=1000] plot(\x, {\x+2});
+	    		\draw[black, domain=0:3, samples=1000] plot(\x, {\x*\x+1/2*\x}) node[right] {$y=f(x)$};
+	    		\filldraw[black] (-2, 0) circle (0.2em) node[anchor=north west] {$(-2, 0)$};
+	    		\draw[black] (0, 2) circle (0.2em) node[anchor=south east] {$(0, 2)$};
+	    		\filldraw[black] (0, 0) circle (0.2em) node[anchor=south east] {$(0, 0)$};
+	    		\filldraw[black] (2, 5) circle (0.2em) node[anchor=south east] {$(2, 5)$};
+	    	\end{tikzpicture}
+	    	$$
+
+	    	考虑外函数$f(g)=t$的解.
+
+	    	\begin{enumerate}[label=$\arabic*^{\circ}$]
+	    		\item $t\geq 5$, $f(g)=t$有唯一解$g$且$g \geq 2$, 则方程$f(x)=g$同样也具有唯一解.
+
+	    		\item $2\leq t<5$, $f(g)=t$有唯一解$g$且$0<g<2$, 则方程$f(x)=g$有两解.
+
+	    		\item $0\leq t<2$, $f(g)=t$有两解$g_1, g_2$且$0\leq g_1<2, -2\leq g_2<0$, 则方程$f(x)=g_1$有两解, 方程$f(x)=g_2$有唯一解, 共三解.
+
+	    		\item $t<0$, $f(g)=t$有唯一解$g$且$g<-2$, 则方程$f(x)=g$同样也具有唯一解.
+	    	\end{enumerate}
+
+	    	故 $t\in(-\infty, 0)\cup[5, +\infty)$, 1解; $t\in[2, 5)$, 2解; $t\in[0, 2)$, 3解.
+
+	\end{enumerate}
+
+\end{document}
