@@ -1,0 +1,58 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{9 函数的奇偶性（简单题）}
+\date{2021年11月17日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=(\arabic*)]
+		\item 若函数$f(x)=\dfrac{x+a}{x^2+bx+1}$在$[-1, 1]$上是奇函数, 则$f(x)$的解析式为？.
+			~\\
+
+			由已知, 有:
+
+			$$
+			f(0) = 0 \Rightarrow a = 0.
+			$$
+
+			于是
+
+			$$f(x)=\frac{x}{x^2+bx+1}.$$
+
+			考虑$x=-x$, 有
+
+			$$f(-x)=-\frac{x}{x^2-bx+1}=f(x)$$
+
+			对任意$x\in [-1, 1]$恒成立, 故有
+
+			$$b=0,$$
+
+			即
+
+			$$f(x)=\frac{x}{x^2+1}.$$
+
+	\end{enumerate}
+
+\end{document}

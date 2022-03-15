@@ -1,0 +1,114 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{9 函数的奇偶性（难题）}
+\date{2021年11月17日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=(\arabic*)]
+		\item 设$a_1 > -1, a_1 \neq \sqrt{2}, a_2 = 1+\dfrac{1}{1+a_1}.$
+			\begin{enumerate}[label=(\arabic*)]
+				\item 证明: $\sqrt 2$介于$a_1, a_2$之间.
+					~\\
+
+					\textbf{\textcolor{red}{总体思路: 证明数$a$在数$b$和数$c$中间 $\Leftrightarrow$ $(a-b)(a-c)<0$.}}
+
+					即证
+
+					$$\left(\sqrt{2}-a_1\right)\left(\sqrt{2}-a_2\right)<0.$$
+
+					而
+
+					$$\left(\sqrt{2}-a_1\right)\left(\sqrt{2}-a_2\right)=\frac{\left(\sqrt{2}-a_1\right)^2 \left(1-\sqrt{2}\right)}{1+a_1}<0,$$
+
+					故$\sqrt 2$介于$a_1, a_2$之间, 得证.
+				~\\
+
+				\item $a_1, a_2$中哪一个更接近$\sqrt{2}$.
+					~\\
+
+					\textbf{\textcolor{red}{总体思路: 数$a$距离数$b$的距离$=|a-b|$.}}
+
+					\begin{align*}
+						\left|\sqrt{2}-a_2\right| &= \left|\frac{\left(1-\sqrt{2}\right)\left(\sqrt{2}-a_1\right)}{1+a_1}\right|\\
+						&=\frac{\sqrt{2}-1}{1+a_1}\left|a_1-\sqrt{2}\right|\\
+						&<\left|a_1-\sqrt{2}\right|
+					\end{align*}
+
+					故$a_2$更接近.
+				~\\
+
+				\item 根据以上事实, 设计一种求$\sqrt{2}$近似值的方案, 并说明理由.
+					~\\
+
+					令$a_{n+1}=1+\dfrac{1}{1+a_n} (n\in\mathbf{N}),$则有$|\sqrt{2}-a_n|=\dfrac{\sqrt{2}-1}{1+a_{n-1}}|\sqrt{2}-a_{n-1}|<\dfrac{\sqrt{2}-1}{2}|\sqrt{2}-a_{n-1}|<\left(\dfrac{\sqrt{2}-1}{2}\right)^2|\sqrt{2}-a_{n-2}|<\cdots<\left(\dfrac{\sqrt{2}-1}{2}\right)^{n-1}|\sqrt{2}-a_1|.$
+
+					有$|\sqrt{2}-a_n|<|\sqrt{2}-a_{n-1}|<\cdots<|\sqrt{2}-a_2|<|\sqrt{2}-a_1|,$
+
+					故$a_1, a_2, a_3, \cdots, a_n$依次更接近于$\sqrt{2}$, 且有$\displaystyle \lim_{n\rightarrow \infty} a_n = \sqrt{2}.$
+			\end{enumerate}
+
+		~\\
+
+		\item 设$f(x)=x^2+a$. 记$f^{1}(x)=f(x), f^{n}(x)=f(f^{n-1}(x)), n=2, 3, \cdots, M=\left\{a\in\mathbf{R}|\forall n\in\mathbf{N}^{*}: |f^{n}(0)|\leq 2\right\}$. 证明: $M=\left[-2, \dfrac{1}{4}\right].$
+			~\\
+
+			\textbf{下证: $(-\infty, -2) \nsubseteq M,$ 即证$\forall a\in (-\infty, -2) \exists n\in \mathbf{N}^{*}: |f^{n}(0)|>2.$}
+
+			令$n=1$有$|f^{1}(0)|=|a|>2$, 故 $(-\infty, -2) \notin M.$
+
+			\textbf{下证: $\left[-2, 0\right) \subseteq M$, 只需证$\forall n\geq 1: |f^{n}(0)| \leq |a|.$}
+
+			考虑$n=1$有$|f^{1}(0)|\leq |a|.$
+
+			设$n=k-1$时成立, 则对$n=k$有$|f^{k}(0)|=|f^{k-1}(0)^2+a|\geq f^{k-1}(0)^2+a \geq a=-|a|, |f^{k}(0)|=|f^{k-1}(0)^2+a|\leq |a^2+a|\leq |a|,$
+
+			于是$\left[-2, 0\right) \subseteq M$.
+
+			\textbf{下证: $\left[0, \dfrac{1}{4}\right] \subseteq M$, 只需证$\forall n\geq 1: |f^{n}(0)|\leq \dfrac{1}{2}.$}
+
+			考虑$n=1$有$|f^{1}(0)|=|a|\leq \dfrac{1}{2}.$
+
+			设$n=k-1$时成立, 则对$n=k$有$|f^{k}(0)|=|f^{k-1}(0)|^2+a\leq \left(\dfrac{1}{2}\right)^2+\dfrac{1}{4}=\dfrac{1}{2}.$
+
+			于是$\left[0, \dfrac{1}{4}\right] \subseteq M$.
+
+			\textbf{下证: $\left(\dfrac{1}{4}, +\infty\right) \nsubseteq M$, 只需证$\forall a\in \left(\dfrac{1}{4}, +\infty\right) \exists n\in \mathbf{N}^{*}: f^{n}(0)>2.$}
+
+			记$a_n = f^{n}(0)$, 则$\forall n\geq 1, a_n > a > \dfrac{1}{4}$且$a_{n+1}=f^{n+1}(0)=f(f^n(0))=f(a_n)=a_n^2+a$.
+
+			$\forall n\geq 1, a_{n+1}-a_{n}=a_n^2-a_n+a=\left(a_n-\dfrac{1}{2}\right)^2+a-\dfrac{1}{4}\geq a-\dfrac{1}{4}.$
+
+			所以有$a_{n+1}-a=a_{n+1}-a_1\geq n\left(a-\dfrac{1}{4}\right)$.
+
+			当$n>\dfrac{2-a}{a-\dfrac{1}{4}}$时, $a_{n+1}>n\left(a-\dfrac{1}{4}\right)+a>2-a+1=2$, 即$f^{n+1}(0)>2$.
+
+			于是有 $\left(\dfrac{1}{4}, +\infty\right) \notin M.$
+
+			\textbf{综上, $M=\left[-2, \dfrac{1}{4}\right].$}
+
+	\end{enumerate}
+
+\end{document}
