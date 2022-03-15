@@ -1,0 +1,88 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{\S 6 不等式测验''（难题）}
+\date{2021年10月20日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=(\arabic*)]
+		\item 下列说法正确的序号是: \textbf{\textcircled{3}, \textcircled{4}}.
+			\begin{enumerate}[label=\textcircled{\arabic*}]
+				\item $\displaystyle \forall x\in\mathbf{R}: x+\frac{1}{x}>2.$
+				\item 若正实数$2x+y=1$, 则$\sqrt{2x}+\sqrt{y}$的最小值为$\sqrt{2}.$
+				\item 若$a, b$为正实数, 则$\displaystyle \frac{a}{4}+\frac{b}{a}+\frac{4}{ab}$的最小值为$2$.
+				\item 若正实数$x, y$满足$x^2+y^2=1+xy$, 则$1<x+y\leq 2.$
+			\end{enumerate}
+			~\\
+
+			\begin{enumerate}[label=\textcircled{\arabic*}]
+				\item 考虑$x=-1$, $x+\frac{1}{x}=-2\ngtr 2$. 错误.
+
+				\item 考虑$x=0.02, y=0.96$, $\sqrt{2x}+\sqrt{y}=\sqrt{0.04}+\sqrt{0.96}\approx 1.180 < 1.2 < 1.414 < \sqrt{2}.$ 错误.
+
+				\item $\displaystyle \frac{a}{4}+\frac{b}{a}+\frac{4}{ab}=\frac{a}{8}+\frac{a}{8}+\frac{b}{a}+\frac{4}{ab}\geq 4\sqrt[4]{\frac{a}{8}\cdot\frac{a}{8}\cdot\frac{b}{a}\cdot\frac{4}{ab}}=4\sqrt[4]{\frac{4}{64}}=2$, 当且仅当$a=4, b=2$时取等. 正确.
+
+				\item 整理, 有$(x+y)^2=1+3xy\Rightarrow 1+xy\geq 2xy, 0<xy\leq 1 \Rightarrow 1<(x+y)^2\leq 4$ 当且仅当$x=y=1$等号成立. 又因为$x, y$是正数, 有$1< x+y \leq 2$. 正确.
+			\end{enumerate}
+
+		~\\
+
+		\item 已知集合$A=\{a_1, a_2, \cdots, a_n\}$中的元素都是正整数, 且$a_1<a_2<\cdots<a_n.$ 集合$A$具有性质$M$: $\displaystyle \forall x, y\in A \text{ and } x\neq y: |x-y|\geq \frac{xy}{25}.$
+
+			\begin{enumerate}[label=(\arabic*)]
+				\item 判断集合$\{1,2,3,4\}$是否具有性质$M$.
+				\item 求证: $\displaystyle \frac{1}{a_1}-\frac{1}{a_n}\geq\frac{n-1}{25}.$
+				\item 求集合$A$中元素个数的最大值, 并说明理由.
+			\end{enumerate}
+			~\\
+
+			\begin{enumerate}[label=(\arabic*)]
+				\item 判断集合$\{1,2,3,4\}$是否具有性质$M$.
+					
+					具有. 过程略.
+				
+				\item 求证: $\displaystyle \frac{1}{a_1}-\frac{1}{a_n}\geq\frac{n-1}{25}.$
+
+					由题意, 有: $\displaystyle a_{i+1}-a_i \geq \frac{a_i a_{i+1}}{25} (i=1,2,3, \cdots, n-1) \Rightarrow \frac{1}{a_i}-\frac{1}{a_{i+1}}\geq \frac{1}{25}.$
+
+					于是有$\displaystyle \frac{1}{a_1}-\frac{1}{a_2}+\frac{1}{a_2}-\frac{1}{a_3}+\cdots+\frac{1}{a_{n-1}}-\frac{1}{a_n}\geq\frac{n-1}{25}$, 即$\displaystyle\frac{1}{a_1}-\frac{1}{a_n}\geq\frac{n-1}{25}.$
+
+					得证.
+				
+				\item 求集合$A$中元素个数的最大值, 并说明理由.
+
+					$\displaystyle \frac{1}{a_i}-\frac{1}{a_n}\geq\frac{n-i}{25}\Rightarrow\frac{1}{a_i}>\frac{n-i}{25}\Rightarrow \frac{1}{i}>\frac{n-i}{25}\Rightarrow25>i(n-i)\text{对}i=1, 2, 3, \cdots, n-1\text{均成立}.$
+
+					考虑$i=5, n\geq10, i(n-i)=5(n-5)>25$均成立.
+
+					考虑$\displaystyle n\leq 10, i(n-i)\leq\left(\frac{i+n-i}{2}\right)^2=\frac{n^2}{4}<25$, 有$n\leq 9.$
+
+					在$n=9$时有$A=\{1, 2, 3, 4, 5, 7, 10, 17, 54\}$符合条件.
+
+			\end{enumerate}
+
+	\end{enumerate}
+
+\end{document}
