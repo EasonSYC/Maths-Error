@@ -1,0 +1,119 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{1 集合测验（难题）}
+\date{2021年09月08日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}
+
+		\item
+			设$\left[m\right]$表示不超过实数$m$的最大整数，则集合$\left\{x\in\mathbb{R}|9x^2-30\left[x\right]+20=0\right\}$中所有元素的和为？.
+
+			\begin{enumerate}
+
+				\item
+					思路：
+						\begin{enumerate}
+
+							\item
+								限定$\left[x\right]$的范围（$[x]$是有限个，方便求解）.
+
+							\item
+								代入原式进行求解.
+
+						\end{enumerate}
+
+				\item
+					解答：
+
+					将$[x]\leq x$代入原方程得：
+
+					$$9x^2+20=30[x]\leq30x.$$
+
+					解不等式，得$x\in \left[\frac{5-\sqrt{5}}{3},\frac{5+\sqrt{5}}{3}\right]$.
+
+					$\frac{5-\sqrt{5}}{3}\approx0.92, \frac{5+\sqrt{5}}{3}\approx2.41 \Rightarrow [x] \in \{0,1,2\}$.
+
+					分类讨论：
+
+					\begin{enumerate} [ $1^{\circ}$ ]
+
+						\item
+							$[x]=0 \Rightarrow x\in[0,1)$
+							代入得：
+							$$9x^2+20=0$$
+							无实数解.
+
+						\item
+							$[x]=1 \Rightarrow x\in[1,2)$
+							代入得：
+							$$9x^2-10=0$$
+							解得$x_1=\sqrt{\frac{10}{9}},x_2=-\sqrt{\frac{10}{9}}$.
+
+							$\because x\in[1,2) \therefore x=\sqrt{\frac{10}{9}}$.
+
+						\item
+							$[x]=2 \Rightarrow x\in[2,3)$
+							代入得：
+							$$9x^2-40=0$$
+							解得$x_1=\sqrt{\frac{40}{9}},x_2=-\sqrt{\frac{40}{9}}$
+
+							$\because x\in[2,3) \therefore x=\sqrt{\frac{40}{9}}$.
+
+					\end{enumerate}
+
+					综上所述，$x=\sqrt{\frac{10}{9}}$或$x=\sqrt{\frac{40}{9}}$，$\sum{x}=\sqrt{10}$.
+
+			\end{enumerate}
+
+		\item
+			设$S$为有限集合，$A_1, A_2, \cdots A_{2019}$为$S$的子集，$|X|$表示集合$X$中元素的个数. 已知对每个正整数$i\in[1,2019]$都有$\left|A_i\right|\geq\frac{1}{5}|S|$.若对于任意集合$S$总是存在$x\in S$在至少$k$个集合$A_i$中出现，则$k$的最大值是多少？并加以证明.
+
+			$k_{\max}=404.$
+
+			下证：$k_{\max} \geq 404$.
+
+			定义元素$t$在$S$的子集$A_i$出现的次数为$f_t$（$t\in S, i \in [1,2019] \cap \mathbb{Z}$）.
+
+			易证
+
+			$$\sum_{t\in S}{f_t} = \sum_{i=1}^{2019}{\left|A_i\right|}\geq\frac{2019}{5}|S|=403.8|S|.$$
+
+			于是
+
+			$$\exists t \in S: f_t \geq \lceil 403.8 \rceil = 404.$$
+
+			于是$k_{\max} \geq 404$.
+
+			下证：$k \ngeq 405$.
+
+			构造
+			$$S=\{1,2,3,4,5\},$$
+			$$A_1=A_2=\cdots A_{404}=\{1\},$$
+			$$A_{405}=A_{406}=\cdots A_{808}=\{2\},$$
+			$$A_{809}=A_{810}=\cdots A_{1212}=\{3\},$$
+			$$A_{1213}=A_{1214}=\cdots A_{1616}=\{4\},$$
+			$$A_{1617}=A_{1618}=\cdots A_{2019}=\{5\}.$$
+
+			此时, $k=404$.
+
+			综上所述, $404\leq k_{\max} < 405$, $k_{\max}=404$.
+
+	\end{enumerate}
+
+\end{document}
