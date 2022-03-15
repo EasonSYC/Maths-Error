@@ -1,0 +1,163 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{longtable}
+
+\graphicspath{ {./images/} }
+
+\usepackage{allan}
+
+\author{\normalfont\sffamily\large\bfseries{高一(4)班\ 邵亦成\ 48号}}
+\title{\normalfont\sffamily\huge\bfseries{\textcolor{allanblue}{220309}\ \textcolor{allancyan}{三角恒等式(1)}\ 题目选解}}
+\date{}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{220309\ 三角恒等式(1)\ 题目选解}
+
+\begin{document}
+
+	\maketitle
+
+	\section{填空题}
+		\subsection{Q6}
+			\defword{6. } 将下列化为$A\sin\left(\omega x + \varphi\right) \left(A>0, \omega>0, \varphi \in \left[0, 2\pi\right)\right)$的形式: $-2\sin x+2\sqrt{3}\cos x, -\dfrac{1}{2}\sin x-\dfrac{1}{2}\cos x.$
+
+			\textit{\color{allanpurple}{\textbf{作者注}: 这样的函数的形式可以理解为\textbf{正弦波}, 在学习三角函数的图像时会有$A\sin\left(\omega x + \varphi \right) + B$的形式, 可以进行预习, 了解不同变量的含义. 这样的式子会在物理中的\textbf{简谐振动}中频繁出现.}}
+
+		\subsection{Q9}
+			\defword{9. } 已知$\tan \alpha, \tan \beta$是方程$x^2+3\sqrt{3}x-2=0$的两个根, $\alpha, \beta \in \left(-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right)$, 求$\alpha + \beta$.
+
+			\color{allanorange}{\textbf{计算器}: 解方程$x^2+3\sqrt{3}x-2=0$, 解为$x_1, x_2$ 输入$\tan^{-1} x_1 (\arctan x_1)+ \tan^{-1} x_2 (\arctan x_2)$即可.}
+
+		\subsection{Q10}
+			\defword{10. } 若在$x$轴正半轴上的一点$P$绕着坐标原点$O$逆时针旋转, 已知$P$点在1秒内转过的角度为$\theta \in (0\degree, 180\degree)$, 经过2秒钟到达第三象限, 经过14秒钟恰又恰好回到出发点, 求$\theta$.
+
+			$$\theta \in (0\degree, 180\degree) \Rightarrow 2\theta \in (0\degree, 360\degree), 2\theta \in \bigcup_{k\in\ZZ} \left(2k\pi + \pi, 2k\pi + \frac{3}{2}\pi\right) \Rightarrow 2\theta \in (180\degree, 270\degree) \Rightarrow \theta \in (90\degree, 135\degree).$$
+
+			$$\theta \in (90\degree, 135\degree) \Rightarrow 14\theta \in \left(7\pi, \dfrac{21}{2}\pi\right), 14\theta = 2k\pi, k\in \ZZ \Rightarrow 14\theta = 8\pi, 10\pi \Rightarrow \theta \in \left\{\dfrac{4}{7}\pi, \dfrac{5}{7}\pi\right\}.$$
+
+	\section{解答题}
+		\subsection{Q14}
+			\defword{14. } 求: 
+				$$\left(\sqrt{\frac{1+\sin \alpha}{1-\sin \alpha}} - \sqrt{\frac{1-\sin \alpha}{1+\sin \alpha}}\right) \cdot \left(\sqrt{\frac{\sec \alpha + 1}{\sec \alpha - 1}} - \sqrt{\frac{\sec \alpha - 1}{\sec \alpha + 1}}\right).$$
+
+				\begin{align*}
+					\YS &= \left(\sqrt{\frac{(1+\sin\alpha)^2}{(1-\sin\alpha)(1+\sin\alpha)}} - \sqrt{\frac{(1-\sin\alpha)^2}{(1+\sin\alpha)(1-\sin\alpha)}}\right) \cdot \left(\sqrt{\frac{(\sec\alpha+1)^2}{(\sec\alpha-1)(\sec\alpha+1)}} - \sqrt{\frac{(\sec\alpha-1)^2}{(\sec\alpha+1)(\sec\alpha-1)}}\right)\\
+					&= \left(\frac{|1+\sin\alpha|}{|\cos\alpha|}-\frac{|1-\sin\alpha|}{|\cos\alpha|}\right) \cdot \left(\frac{|\sec\alpha+1|}{|\tan\alpha|} - \frac{|\sec\alpha-1|}{|\tan\alpha|}\right) \tag*{\color{allanred}{$\sin^2\alpha + \cos^2\alpha=1, 1+\tan^2\alpha=\sec^2\alpha$}}\\
+					&= \frac{2\sin\alpha}{|\cos\alpha|} \cdot \frac{|\sec \alpha + 1| - |\sec \alpha - 1|}{|\tan \alpha|} \tag*{\color{allanred}{$\sin \alpha \in (-1, 1)$}}\\
+					&= \sgn(\sec\alpha) 2\tan\alpha \cdot \sgn(\tan\alpha) \frac{|\sec \alpha + 1| - |\sec \alpha - 1|}{\tan \alpha} \tag*{\color{allanred}{$\sgn(\sec\alpha) = \sgn(\cos\alpha)$}}\\
+					&= 2 \sgn(\sec\alpha) \sgn(\tan\alpha) (|\sec\alpha + 1| - |\sec\alpha - 1|)\\
+					&= 2 \sgn(\tan\alpha) \cdot 2 \tag*{\color{allanred}{$\sec\alpha\in[1, +\infty) \Rightarrow \sgn(\sec\alpha)=1, |\sec\alpha+1|-|\sec\alpha-1|=2$}}\\
+					&= \pm 4 \tag*{\color{allanred}{$\sec\alpha\in(-\infty, -1] \Rightarrow \sgn(\sec\alpha)=-1, |\sec\alpha+1|-|\sec\alpha-1|=-2$}}.
+				\end{align*}
+
+	\section{附加题}
+		\subsection{Q15}
+			\defword{15. }
+				\begin{enumerate}
+					\item 若$\lg(\sin x-\cos x)=\lg\sin x + \lg\cos x$, 求$\tan x$.
+					\item 若$\sec x + \tan x = \dfrac{22}{7}, \csc x + \cot x = \dfrac{m}{n}, \gcd(m, n)=1$, 求$m+n$.
+				\end{enumerate}
+				~\\
+
+				\begin{enumerate}
+					\item 若$\lg(\sin x-\cos x)=\lg\sin x + \lg\cos x$, 求$\tan x$.
+						~\\
+
+						由已知, 显然有\textcolor{allanyellow}{$\sin x > \cos x > 0$} ($\lg$对数函数定义域), \textcolor{allanred}{$\sin x - \cos x = \sin x \cos x$} (对数函数的性质), 故有
+
+						$$\sin^2 x \cos^2 x = 1 - 2 \sin x \cos x,$$
+
+						即
+
+						$$\sin x \cos x = \sqrt{2}-1 \text{(舍负)}.$$
+
+						由
+
+						$$(\sin x + \cos x)^2 = 1 + 2\sin x \cos x, (\sin x - \cos x)^2 = 1 - 2\sin x\cos x$$
+
+						有
+
+						$$(\sin x + \cos x)^2 = 2 \sqrt{2} - 1, (\sin x - \cos x)^2 = 3 - \sqrt{2},$$
+
+						即
+
+						$$\sin x + \cos x = \sqrt{2\sqrt{2} - 1}, \sin x - \cos x = \sqrt{2} - 1.$$
+
+						显然, 有
+
+						$$\sin x = \frac{(\sin x + \cos x) + (\sin x - \cos x)}{2}, \cos x = \frac{(\sin x + \cos x) - (\sin x - \cos x)}{2},$$
+
+						即
+
+						$$\tan x = \frac{(\sin x + \cos x) + (\sin x - \cos x)}{(\sin x + \cos x) - (\sin x - \cos x)} = \frac{1+\sqrt{2} + \sqrt{2\sqrt{2}-1}}{2}.$$
+
+					\item 若$\sec x + \tan x = \dfrac{22}{7}, \csc x + \cot x = \dfrac{m}{n}, \gcd(m, n)=1$, 求$m+n$.
+						~\\
+
+						为了方便起见, 我们记$p \ddef \dfrac{22}{7}$
+
+						由
+
+						$$\sec^2 x - \tan^2 x = (\sec x + \tan x)(\sec x - \tan x) = 1$$
+
+						有
+
+						$$\sec x - \tan x = \frac{1}{p}.$$
+
+						考虑$\sec x, \tan x$有
+
+						$$\sec x = \frac{p + \frac{1}{p}}{2} > 0, \tan x = \frac{p - \frac{1}{p}}{2} > 0 \Rightarrow x \in \mathrm{I}.$$
+
+						对$\cot x$取倒数, 有
+
+						$$\cot x = \frac{2}{p - \frac{1}{p}} = \frac{2p}{p^2 - 1},$$
+
+						考虑$\csc x$有
+
+						$$\csc x = \sqrt{1 + \cot^2 x} = \sqrt{1+\frac{4}{p^2 + \frac{1}{p^2} - 2}} = \sqrt{\frac{p^2 + \frac{1}{p^2} + 2}{p^2 + \frac{1}{p^2} - 2}} = \frac{p+\frac{1}{p}}{p-\frac{1}{p}} = \frac{p^2 + 1}{p^2 - 1}.$$
+
+						故
+
+						$$\csc x + \cot x = \frac{p^2 + 2p + 1}{p^2 - 1} = \frac{p + 1}{p - 1} = \frac{29}{15}, m + n = 44.$$
+
+						\defword{另解. } 利用\textbf{\textcolor{allandarkblue}{半角公式$\tan\left(\dfrac{x}{2}\right) = \cos x - \cot x$和$\cot \left(\dfrac{x}{2}\right) = \csc x + \cot x$}}有
+
+						\begin{align*}
+							\frac{22}{7} &= \sec x + \tan x\\
+							&= \csc \left(\frac{\pi}{2} + x \right) - \cot \left(\frac{\pi}{2} + x \right)\\
+							&= \tan \left(\frac{1}{2} \left(\frac{\pi}{2} + x\right)\right)\\
+							&= \tan \left(\frac{\pi}{4} + \frac{x}{2} \right),
+						\end{align*}
+
+						故
+
+						\begin{align*}
+							\frac{m}{n} &= \csc x + \cot x\\
+							&= \csc \left(\frac{\pi}{2} + x \right) - \cot \left(\frac{\pi}{2} + x\right)\\
+							&= \tan \left(\frac{3\pi}{4} - \left(\frac{\pi}{4} + \frac{x}{2}\right)\right)\\
+							&= \tan \left(\frac{3\pi}{4} - \arctan \frac{22}{7}\right)\\
+							&= \frac{-1 - \frac{22}{7}}{1 - \frac{22}{7}}\\
+							&= \frac{29}{15}, m + n = 44.
+						\end{align*}
+
+				\end{enumerate} 
+
+	\section{特别致谢}
+		\textbf{\textcolor{allangreen}{stOOrz-Mathematical-Modelling-Group/MathxStudio}}: 提供排版模版.
+
+\end{document}
