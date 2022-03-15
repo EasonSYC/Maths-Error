@@ -1,0 +1,91 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{1 集合测验（简单题）}
+\date{2021年09月08日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}
+		
+		\item
+			设集合$A=\{-1,1\}$, 集合$B=\{x|ax=1, a\in \mathbb{R}\}$, 则使得$B \subseteq A$的$a$的所有取值构成的集合是？.
+
+			错误答案：$\{-1,1\}$
+
+			正确答案：$\{-1,0,1\}$
+
+			正确解法：
+
+			\begin{enumerate} [ (i) ]
+
+				\item
+					$B=\emptyset, a=0$
+
+				\item
+					$a\neq 0, x = -1$或$x = 1 \Rightarrow a = -1$或$1$
+
+			\end{enumerate}
+
+			$\{-1,0,1\}$
+
+		~\\
+
+		\item
+			若$a\in A$且$a - 1 \notin A, a + 1 \notin A$, 则称$a$为集合$A$的孤立元素. 那么$M=\{1,2,3,4,5,6,7,8,9\}$的无孤立元素4元子集有？个.
+
+			错误答案：28
+
+			正确答案：21
+
+			正确解法：
+
+			$$
+			\{1,2,3,4\}, \{1,2,4,5\}, \cdots \{1,2,8,9\}, \{2,3,4,5\}, \{2,3,5,6\}, \cdots \{2,3,8,9\}, \cdots \{6,7,8,9\}
+			$$
+
+			6+5+4+3+2+1=21.
+
+		~\\
+
+		\item
+			题略.
+
+			错误写法：
+
+			\begin{enumerate} [ (1) ]
+
+				\item
+					$B=\emptyset, \cdots$
+
+				\item
+					$B\neq \emptyset, m \geq -2, m + 1 \leq 4 \Rightarrow m \leq 3$
+			\end{enumerate}
+
+			正确写法：
+
+			\begin{enumerate} [ (1) ]
+
+				\item
+					$B=\emptyset, \cdots$
+
+				\item
+					$B\neq \emptyset, m \geq -2, m + 1 \leq 4 \Rightarrow m \leq 3 \therefore m \in [-2, 3]$
+			\end{enumerate}
+
+	\end{enumerate}
+
+\end{document}
