@@ -1,0 +1,153 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usetikzlibrary{fit}
+\usepackage{xcolor}
+\usepackage{longtable}
+
+\graphicspath{ {./images/} }
+
+\newcommand\addvmargin[1]{
+  \node[fit=(current bounding box),inner ysep=#1,inner xsep=0]{};
+}
+
+\setlength{\tabcolsep}{5mm} % separator between columns
+\def\arraystretch{1.25} % vertical stretch factor
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{15 幂函数、指数函数'}
+\date{2021年12月29日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=\arabic*.]
+		\item 已知函数$f(x)=\left\vert 2^x - 1\right\vert - \left\vert 2^x + 1 \right\vert - a - 1$恒有零点, 则$a$的取值范围为?.
+			~\\
+
+			即方程
+
+			$$\left\vert 2^x - 1\right\vert - \left\vert 2^x + 1 \right\vert = a + 1$$
+
+			有解.
+
+			令$g(x)=\left\vert 2^x - 1\right\vert - \left\vert 2^x + 1 \right\vert,$化简$g(x)$, 有
+
+			$$g(x)=\left\vert 2^x - 1\right\vert - 2^x - 1 =\left\{\begin{array}{rl}-2\cdot 2^x, &x<0,\\-2, &x\geq 0.\end{array}\right.$$
+
+			绘制$y=g(x)$的图像,
+
+			$$
+			\begin{tikzpicture}[scale=1.5, baseline=0]
+	    		\draw[black, ->] (-5,  0)--( 5,  0) node[below] {$x$};
+	    		\draw[black, ->] ( 0, -3)--( 0,  1) node[right] {$y$};
+	    		\draw[black, domain=0:4, samples=100] plot(\x, -2) node[right] {$y=g(x)$};
+	    		\draw[black, domain=-4:0, samples=100] plot(\x, {-2 * 2^(\x)});
+	    		\filldraw[black] (0, -2) circle (0.1em) node[anchor=south west] {$(0, -2)$};
+	    		\filldraw[black] (0, 0) circle (0.1em) node[anchor=south west] {$O$};
+				\addvmargin{1mm}
+			\end{tikzpicture}
+			$$
+
+			显然有
+
+			$$\lim_{x \rightarrow -\infty} g(x) = 0, -2 \leq g(x) < 0.$$
+
+			故
+
+			$$a+1\in[-2, 0),$$
+
+			故
+
+			$$a\in[-3, -1).$$
+
+		~\\
+
+		\item 已知定义域为$[0, 1]$的函数$f(x)$同时满足: (1) $\forall x\in[0, 1], f(x)\geq 0$. (2) $f(1) = 1$. (3) $\forall x_1 \geq 0, x_2 \geq 0, x_1 + x_2 \leq 1, f(x_1 + x_2) \geq f(x_1) + f(x_2)$.
+			\begin{enumerate}[label=(\arabic*)]
+				\item 求$f(0)$的值.
+					~\\
+
+					令$x_1 = 1, x_2 = 0$, 有
+
+					$$f(1) \geq f(1) + f(0), f(0) \leq 0.$$
+
+					又
+
+					$$\forall x\in[0, 1], f(x) \geq 0,$$
+
+					有
+
+					$$f(0)=0$$
+
+				~\\
+
+				\item 求$f(x)$的最大值.
+					~\\
+
+					下证: $f(x)$在$[0, 1]$上为增函数.
+
+					$\forall 0\leq x_1 < x_2 \leq 1$,
+
+					$$f(x_2) - f(x_1) \geq f(x_2 - x_1) \geq 0, f(x_2) \geq f(x_1),$$
+
+					故有
+
+					$$\max_{x\in[0, 1]} f(x) = f(1) = 1.$$
+
+				~\\
+
+				\item 若$\forall x\in[0, 1)$, $4f^2(x) - 4(2-a) f(x) + 5-4a \geq 0$, 求$a$的取值范围.
+					~\\
+
+					$x\in [0, 1), f(x) \in [0, 1].$
+
+					令$g(x) = 4x^2 - 4(2-a)x + 5-4a,$ $y=g(x)$对称轴为直线$x=\dfrac{2-a}{2}$.
+
+					原命题等价于
+
+					$$\min_{x\in[0, 1]} g(x) \geq 0.$$
+
+					分三类讨论.
+
+					\begin{enumerate}[label=$\arabic*^{\circ}$]
+						\item $\dfrac{2-a}{2} \leq 0$, $a \geq 2$, 
+
+							$$\min_{x\in[0, 1]} g(x) = g(0) = 5-4a \geq 0,$$
+
+							$a\leq \dfrac{5}{4}$, 故$a\in \emptyset$.
+
+						\item $0 < \dfrac{2-a}{2} \leq 1$, $0 \leq a < 2$,
+
+							$$\min_{x\in[0, 1]} g(x) = g\left(\frac{2-a}{2}\right) \geq 0,$$
+
+							$a\in[-1, 1]$, 故$a\in [0, 1]$.
+
+						\item $1 < \dfrac{2-a}{2}$, $a<0$,
+
+							$$\min_{x\in[0, 1]} g(x) = g(1) = 1 \geq 0,$$
+
+							$a \in \mathbb{R}$, 故$a \in (-\infty, 0)$.
+
+					\end{enumerate}
+
+					综上所述, $a\in (-\infty, 1]$.
+
+			\end{enumerate}
+
+	\end{enumerate}
+
+\end{document}
