@@ -1,0 +1,79 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{\S 6 不等式测验''（简单题）}
+\date{2021年10月20日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=(\arabic*)]
+		\item 已知$x, y\in\mathbf{R}^{+}.$ 若$x+9y=1$，则$\displaystyle \frac{1}{x}+\frac{1}{y}$的最小值为\st{$10+2\sqrt{9}$} \textbf{16}.
+			~\\
+
+			$\displaystyle \because x,y \in \mathbf{R}^{+} \therefore \frac{x}{y}, \frac{9y}{x} \in \mathbf{R}^{+}$, 有
+
+			$$
+			\begin{array}{rcl}
+				\displaystyle \frac{1}{x}+\frac{1}{y}&=&\displaystyle \left(\frac{1}{x}+\frac{1}{y}\right)(x+9y)\\\\
+				&=&\displaystyle 10+\frac{9y}{x}+\frac{x}{y}\\\\
+				&\geq&\displaystyle 10+2\sqrt{\frac{9y}{x}\cdot\frac{x}{y}}\\\\
+				&=&\displaystyle 10+2\sqrt{9}\\
+				&=&\displaystyle 16.
+			\end{array}
+			$$
+
+			\textcolor{red}{\textbf{$\sqrt{9}$要化简成3不能保留$\sqrt{9}$.}}
+
+		~\\
+
+		\item 对于任意的$x\in\mathbf{R}$满足$(a-2)x^2+2(a-2)x-4<0$恒成立的所有实数$a$构成集合$A$, 使不等式$|x+1|-|x+2|\leq a$的解集为空集的所有实数$a$构成集合$B$. 则$U=\mathbf{R}$时，$A\cap\overline{B}=$\st{$(-2, 2)$} \textbf{$[-1, 2]$}.
+			~\\
+
+			考虑$(a-2)x^2+2(a-2)x-4<0$在$\mathbf{R}$上恒成立, 分两类讨论：
+
+			\begin{enumerate}[label=$\arabic*^{\circ}$]
+				\item $a=2, -4<0$符合题意.
+				\item $a\neq 2$, 有
+				
+					$$
+					\left\{
+					\begin{array}{rclcrclcrcl}
+					a-2&<&0&\Rightarrow&a&<&2\\
+					\Delta&<&0&\Rightarrow&4a^2-16a+16+16a-32&<&0&\Rightarrow&a&\in&(-2, 2)
+					\end{array}
+					\right.\Rightarrow a\in(-2, 2).
+					$$
+			\end{enumerate}
+
+			于是有$A=(-2, 2].$
+
+			不等式$|x+1|-|x+2|\leq a$的解集为空集, 有$a<(|x+1|-|x+2|)_{\min}=-1$.
+
+			于是有$B=(-\infty, -1).$
+
+			$A\cap \overline{B}=(-2, 2]\cap [-1, +\infty)=[-1, 2].$
+
+	\end{enumerate}
+
+\end{document}
