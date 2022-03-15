@@ -1,0 +1,94 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proof}{Proof}
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{4 不等式测验（难题）}
+\date{2021年09月29日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}
+
+		\item
+			解关于$x$的不等式$[(a-1)x-(a-2)](x-2)>0.\ (a\in \mathbb{R})$
+
+			~\\
+
+			\begin{enumerate} [$1^\circ$]
+				\item
+					$a=1$时，
+
+					原不等式可化简为$x-2>0 \Rightarrow x>2$即$x\in(2,+\infty)$.
+
+				\item
+					$a\neq 1$时，
+
+					有：方程$[(a-1)x-(a-2)](x-2)=0$的两根为$x_1=\frac{a-2}{a-1}=1+\frac{1}{1-a}, x_2=2.$
+
+					\begin{enumerate} [(i)]
+						\item
+							$a>1$时，
+
+							恒有$x_1<x_2$，
+
+							于是有$x\in \left(-\infty, 1+\frac{1}{1-a}\right)\cup(2,+\infty)$.
+
+						\item
+							$a<1$时，
+
+							原不等式可化为$[(1-a)x-(2-a)](x-2)<0$.
+
+							\begin{enumerate} [a.]
+								\item
+									$x_1<x_2$即$a<0$时，$x\in\left(1+\frac{1}{1-a}, 2\right)$.
+
+								\item
+									$x_1=x_2$即$a=0$时，$x\in\emptyset$.
+
+								\item
+									$x_1>x_2$即$0<a<1$时，$x\in\left(2, 1+\frac{1}{1-a}\right)$.
+							\end{enumerate}
+
+					\end{enumerate}
+
+			\end{enumerate}
+
+
+		综上所述，原不等式的解集$=$
+
+		$$
+		\left\{
+		\begin{array}{rcl}
+
+			\left(1+\frac{1}{1-a}, 2\right)&,&a\in(-\infty, 0)\\
+			\emptyset&,&a=0\\
+			\left(2, 1+\frac{1}{1-a}\right)&,&a\in(0, 1)\\
+			\left(2, +\infty \right)&,&a=1\\
+			\left(-\infty, 1+\frac{1}{1-a}\right)\cup(2,+\infty)&,&a\in(0, +\infty)\\
+
+		\end{array}
+		\right..
+		$$
+
+		这种写法是错误的，综上应该按照如下格式：
+
+		综上：当$a\in(-\infty, 0)$时，原不等式解集为$\left(1+\frac{1}{1-a}, 2\right)$；当$a=0$时，原不等式解集为$\emptyset$；当$a\in(0, 1)$时，原不等式解集为$\left(2, 1+\frac{1}{1-a}\right)$；当$a=1$时，原不等式解集为$\left(2, +\infty \right)$；当$a\in(0, +\infty)$时，原不等式解集为$\left(-\infty, 1+\frac{1}{1-a}\right)\cup(2,+\infty)$.
+
+	\end{enumerate}
+
+\end{document}
