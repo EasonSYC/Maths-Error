@@ -1,0 +1,142 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{7 幂指对测验（难题）}
+\date{2021年10月27日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=(\arabic*)]
+		\item 已知$a>1, b>1$, 求$\displaystyle \frac{b^2}{a-1} + \frac{a^2}{b-1}$的最小值.
+			~\\
+
+			我也不知道为什么我最后一步就是卡住了.
+
+			\textbf{法一 (基本不等式\ 轮换求和)}: 
+
+				$$
+				\begin{array}{rcl}
+				a>1, b>1&\Rightarrow&a-1>0, b-1>0\\
+				&\Rightarrow&\displaystyle \frac{b^2}{a-1}+4(a-1)\geq 4b, \frac{a^2}{b-1}+4(b-1)\geq 4a\\
+				&\Rightarrow&\displaystyle \frac{b^2}{a-1}+4(a-1) + \frac{a^2}{b-1}+4(b-1)\geq 4a + 4b\\
+				&\Rightarrow&\displaystyle \frac{b^2}{a-1}+\frac{a^2}{b-1}\geq 8,
+				\end{array}
+				$$
+
+				等号成立当且仅当$\displaystyle \frac{b^2}{a-1}=4(a-1), \frac{a^2}{b-1}=4(b-1)$即$a=b=2$.
+			~\\
+
+			\textbf{法二 (基本不等式\ 换元)}: 令$a-1=m, b-1=n (m>0, n>0)$, 则有: 
+
+				$$
+				\begin{array}{rcl}
+					\displaystyle \frac{b^2}{a-1} + \frac{a^2}{b-1}&=&\displaystyle \frac{(n+1)^2}{m}+\frac{(m+1)^2}{n}\\
+					&=&\displaystyle \frac{n^3+2n^2+n+m^3+2m^2+m}{mn}\\\\
+					&=&\displaystyle \frac{(m+n)(m^2+n^2-mn)+2(m^2+n^2)+m+n}{mn}\\\\
+					&\geq&\displaystyle \frac{2\sqrt{mn}(2mn-mn)+2\times 2mn+2\sqrt{mn}}{mn}\\\\
+					&=&2\displaystyle \sqrt{mn}+4+\frac{8}{\sqrt{mn}}\\
+					&\geq&8,
+				\end{array}
+				$$
+
+				等号成立当且仅当
+
+				$$
+				\left\{
+				\begin{array}{rcl}
+					m&=&n\\
+					2\sqrt{mn}&=&\displaystyle\frac{8}{\sqrt{mn}}\\
+				\end{array}
+				\right.
+				$$
+
+				即$m=n=2$即$a=b=1$.
+			~\\
+
+			\textbf{法三 (基本不等式\ 暴力)}:
+
+				$$
+				\begin{array}{rcl}
+					\displaystyle \frac{b^2}{a-1} + \frac{a^2}{b-1}&=&\displaystyle \frac{\left(\frac{b^2}{a-1} + \frac{a^2}{b-1}\right)\cdot\left[(a-1)+(b-1)\right]}{a+b-2}\\\\
+					&=&\displaystyle \frac{b^2+\frac{b^2(b-1)}{a-1}+\frac{a^2(a-1)}{b-1}+a^2}{a+b-2}\\\\
+					&\geq&\displaystyle \frac{a^2+b^2+2\sqrt{\frac{b^2(b-1)}{a-1}\cdot \frac{a^2(a-1)}{b-1}}}{a+b-2}\\\\
+					&=&\displaystyle \frac{a^2+b^2+2ab}{a+b-2}\\\\
+					&=&\displaystyle \frac{(a+b)^2}{a+b-2}\\\\
+					&=&\displaystyle \frac{[(a+b)^2]-4+4}{a+b-2}\\\\
+					&=&\displaystyle \frac{(a+b+2)(a+b-2)+4}{a+b-2}\\\\
+					&=&\displaystyle a+b+2+\frac{4}{a+b-2}\\\\
+					&=&\displaystyle a+b-2+\frac{4}{a+b-2} + 4\\
+					&\geq&\displaystyle 4+2\sqrt{4}\\
+					&=&8,
+				\end{array}
+				$$
+
+				等号成立当且仅当
+
+				$$
+				\left\{
+				\begin{array}{rcl}
+					\displaystyle \frac{b^2(b-1)}{a-1}&=&\displaystyle \frac{a^2(a-1)}{b-1}\\\\
+					a+b-2&=&\displaystyle \frac{4}{a+b-2}\\
+				\end{array}
+				\right.
+				$$
+
+				即$a=b=1$.
+			~\\
+
+			\textbf{法四 (Cauchy–Schwarz 不等式)}: 
+
+				$$
+				\begin{array}{rcl}
+					\displaystyle \frac{b^2}{a-1} + \frac{a^2}{b-1}&\geq&\displaystyle \frac{(a+b)^2}{a+b-2}\\\\
+					&=&\displaystyle \frac{[(a+b)^2]-4+4}{a+b-2}\\\\
+					&=&\displaystyle \frac{(a+b+2)(a+b-2)+4}{a+b-2}\\\\
+					&=&\displaystyle a+b+2+\frac{4}{a+b-2}\\\\
+					&=&\displaystyle a+b-2+\frac{4}{a+b-2} + 4\\
+					&\geq&\displaystyle 4+2\sqrt{4}\\
+					&=&8,
+				\end{array}
+				$$
+
+				等号成立当且仅当
+
+				$$
+				\left\{
+				\begin{array}{rcl}
+					\displaystyle \frac{b}{a-1}&=&\displaystyle \frac{a}{b-1}\\\\
+					a+b-2&=&\displaystyle \frac{4}{a+b-2}\\
+				\end{array}
+				\right.
+				$$
+
+				即$a=b=1$.
+
+				\textbf{Cauchy–Schwarz 不等式的 Sedrakyan 表述}: $\displaystyle \sum_{i=1}^{n}{\frac{u^2}{v}}\geq\frac{\left(\sum_{i=1}^{n}{u}\right)^2}{\sum_{i=1}^{n}{v}}$, 等号成立当且仅当$\displaystyle \frac{u_1}{v_1}=\frac{u_2}{v_2}=\cdots=\frac{u_n}{v_n}.$
+
+				\textbf{Cauchy–Schwarz 不等式}: $\displaystyle \sum_{i=1}^{n} u_i^2 \cdot \sum_{i=1}^{n} v_i^2 \geq \left(\sum_{i=1}^{n}u_i v_i\right)^2$, 等号成立当且仅当$\displaystyle \frac{u_1}{v_1}=\frac{u_2}{v_2}=\cdots=\frac{u_n}{v_n}.$
+
+	\end{enumerate}
+
+\end{document}
