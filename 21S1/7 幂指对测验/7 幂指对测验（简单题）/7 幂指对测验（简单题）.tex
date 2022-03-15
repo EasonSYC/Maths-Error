@@ -1,0 +1,70 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\graphicspath{ {./images/} }
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{7 幂指对测验（简单题）}
+\date{2021年10月27日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}[label=(\arabic*)]
+		\item 不等式组$(2-x)(x-6)\leq 0$的解集为 \st{$(-\infty , 2]\cup [0, +\infty)$} \textcolor{red}{$(-\infty, 2]\cup[6, +\infty)$}.
+			~\\
+
+			\st{$\text{我不是很明白为什么一个不等式也是不等式组}$}.	
+
+			不多作评价, 能把6抄到卷子上抄成0的可能也只有我了吧.
+
+		\item 不等式$\displaystyle \left(\frac{1}{x}+2\right)\cdot\frac{1}{x}<0$的解集为 \st{$\displaystyle \left(-\frac{1}{2}, 0\right)$} \textcolor{red}{$\displaystyle \left(-\infty, -\frac{1}{2}\right)$}.
+			~\\
+
+			$\displaystyle \left(\frac{1}{x}+2\right)\cdot\frac{1}{x}<0 \Rightarrow \frac{1}{x} \in (-2, 0) \Rightarrow x \in \left(-\infty, -\frac{1}{2}\right).$
+
+		\item 关于$x$的不等式$x^2+mx+m^2+3m<0$的解集包含区间$(1, 2)$, 则$m$的取值范围是 \st{$[-2-\sqrt{3}, -2+\sqrt{3}]$} \textcolor{red}{$[-2-\sqrt{3}, -1]$}.
+			~\\
+
+			不多作评价, 我也不知道我为什么会觉得$-1$比$-2+\sqrt{3}$大.
+
+			$$
+			\begin{array}{cl}
+				&\left\{
+				\begin{array}{rcl}
+					1+m+m^2+3m&\leq&0\\
+					4+2m+m^2+3m&\leq&0\\
+				\end{array}
+				\right.\\
+				\Rightarrow&
+				\left\{
+				\begin{array}{rcl}
+					m&\in&[-2-\sqrt{3}, -2+\sqrt{3}]\\
+					m&\in&[-4, -1]\\
+				\end{array}
+				\right.\\
+				\Rightarrow&
+				m\in[-2-\sqrt{3}, -2+\sqrt{3}]\cap[-4, -1]=[-2-\sqrt{3}, -1].
+			\end{array}\\
+			$$
+
+	\end{enumerate}
+
+\end{document}
