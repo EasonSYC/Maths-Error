@@ -1,0 +1,349 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{longtable}
+
+\graphicspath{ {./images/} }
+
+\author{高一(4)班\ 邵亦成\ 48号}
+\title{220302\ 同角三角比\ 题目选解}
+\date{}
+
+\geometry{a4paper, scale=0.8}
+
+\usepackage{allan}
+
+\lhead{220302\ 同角三角比\ 题目选解}
+\titleformat{\subsection}{\color{black}\normalfont\sffamily\large\bfseries}{\color{allandarkblue} \textbf{\S \thesubsection}}{0.3cm}{}
+
+\begin{document}
+
+	\maketitle
+
+	\section{填空题}
+		\subsection{Q8}
+			\defword{8. } $f(x)=\sin \dfrac{\pi x}{6} + \cos \dfrac{\pi x}{4}$, 求$\displaystyle \sum_{i=1}^{2022} f(i)$.
+				~\\
+
+				定义\defword{$g(x), h(x)$}如下:
+
+				$$
+				g(x) \ddef \sin \dfrac{\pi x}{6}, h(x) \ddef \cos \dfrac{\pi x}{4},
+				$$
+
+				显然有:
+
+				$$\sum_{i=1}^{2022} f(i) = \sum_{i=1}^{2022} g(i) + \sum_{i=1}^{2022} h(i).$$
+
+				下求\defword{$\displaystyle \sum_{i=1}^{2022} g(i)$}.
+
+				考虑$\displaystyle \sum_{i=1}^{12} g(i)$:
+
+				\begin{align*}
+				\sum_{i=1}^{12} g(i) = & \sin \dfrac {\pi}{6} + \sin \dfrac{2 \pi}{6} + \sin \dfrac{3 \pi}{6} + \sin \dfrac{4 \pi}{6} + \sin \dfrac{5 \pi}{6} + \sin \dfrac{6 \pi}{6}\\
+				& + \sin \dfrac{7 \pi}{6} + \sin \dfrac{8 \pi}{6} + \sin \dfrac{9 \pi}{6} + \sin \dfrac{10 \pi}{6} + \sin \dfrac{11 \pi}{6} + \sin \dfrac{12 \pi}{6}\\
+				= & \sin \dfrac {\pi}{6} + \sin \dfrac{2 \pi}{6} + \sin \dfrac{3 \pi}{6} + \sin \dfrac{4 \pi}{6} + \sin \dfrac{5 \pi}{6} + \sin \dfrac{6 \pi}{6}\\
+				& - \sin \dfrac{5 \pi}{6} - \sin \dfrac{4 \pi}{6} - \sin \dfrac{3 \pi}{6} - \sin \dfrac{2 \pi}{6} - \sin \dfrac{\pi}{6} - \sin \dfrac{0 \pi}{6}\\
+				= & \sin \frac{12 \pi}{6} - \sin \frac{0 \pi}{6}\\
+				= & 0.
+				\end{align*}
+
+				显然有:
+
+				$$g(x)=g(x+12),$$
+
+				又$2022=168 \times 12 + 6$,
+
+				有:
+
+				\begin{align*}
+				\sum_{i=1}^{2022} g(i) &= 168 \times 0 + \sin \dfrac {\pi}{6} + \sin \dfrac{2 \pi}{6} + \sin \dfrac{3 \pi}{6} + \sin \dfrac{4 \pi}{6} + \sin \dfrac{5 \pi}{6} + \sin \dfrac{6 \pi}{6}\\
+				&= 0 + \frac{1}{2} + \frac{\sqrt{3}}{2} + 1 + \frac{\sqrt{3}}{2} + \frac{1}{2} + 0\\
+				&= 2 + \sqrt{3}.
+				\end{align*}
+
+				下求\defword{$\displaystyle \sum_{i=1}^{2022} h(i)$}.
+
+				考虑$\displaystyle \sum_{i=1}^{8} h(i)$:	
+
+				\begin{align*}
+				\sum_{i=1}^{8} h(i) = & \cos \dfrac {\pi}{4} + \cos \dfrac{2 \pi}{4} + \cos \dfrac{3 \pi}{4} + \cos \dfrac{4 \pi}{4}\\
+				& + \cos \dfrac{5 \pi}{4} + \cos \dfrac{6 \pi}{4} + \cos \dfrac{7 \pi}{4} + \cos \dfrac{8 \pi}{4}\\
+				= & \cos \dfrac {\pi}{4} + \cos \dfrac{2 \pi}{4} - \cos \dfrac{\pi}{4} - \cos \dfrac{0 \pi}{4}\\
+				& - \cos \dfrac{\pi}{4} - \cos \dfrac{2 \pi}{4} + \cos \dfrac{\pi}{4} + \cos \dfrac{0 \pi}{4}\\
+				= & 0.
+				\end{align*}
+
+				显然有:
+
+				$$h(x)=h(x+8),$$
+
+				又$2022=252 \times 8 + 6$,
+
+				有:
+
+				\begin{align*}
+				\sum_{i=1}^{2022} h(i) &= 252 \times 0 + \cos \dfrac {\pi}{4} + \cos \dfrac{2 \pi}{4} + \cos \dfrac{3 \pi}{4} + \cos \dfrac{4 \pi}{4} + \cos \dfrac{5 \pi}{4} + \cos \dfrac{6 \pi}{4}\\
+				&= 0 + 0 - \cos \dfrac{0\pi}{4} - \cos \dfrac{\pi}{4} - 0\\
+				&= -1 -\frac{\sqrt{2}}{2}.
+				\end{align*}
+
+				综上,
+
+				\begin{align*}
+				\sum_{i=1}^{2022} f(i) &= \sum_{i=1}^{2022} g(i) + \sum_{i=1}^{2022} h(i)\\
+				&= 2 + \sqrt{3} - 1 - \frac{\sqrt{2}}{2}\\
+				&= 1 - \frac{\sqrt{2}}{2} + \sqrt{3}.
+				\end{align*}
+
+		\subsection{Q10}
+			\defword{10. } 下列命题中, 正确的有:
+
+			\begin{enumerate}[label=(\arabic*)]
+				\item 若$\sin \alpha \sqrt{1-\cos^2\alpha} - \cos \alpha \sqrt{1-\sin^2\alpha}=-1$, 则$\alpha \in \mathrm{IV}$.
+				\item 若$\displaystyle \sqrt{\frac{1+\sin \alpha}{1-\sin \alpha}} = \tan \alpha + \sec \alpha$, 则$\displaystyle \alpha \in \left(2k\pi - \frac{\pi}{2}, 2k\pi + \frac{\pi}{2}\right), k \in \ZZ$.
+				\item 若$\displaystyle \sqrt{\frac{1+\cos \alpha}{1-\cos \alpha}} - \sqrt{\frac{1-\cos \alpha}{1+\cos \alpha}}=-2\cot \alpha$, 则$\displaystyle \alpha \in \left(2k\pi - \pi, 2k\pi\right), k \in \ZZ$.
+				\item 若$\alpha \in \mathrm{IV}$, 则 $\left[\exists \alpha: \left(\dfrac{\alpha}{2} \in \mathrm{II} \wedge \dfrac{\alpha}{4} \in \mathrm{II}\right)\right] \vee \left[\exists \alpha: \left(\dfrac{\alpha}{2} \in \mathrm{IV} \wedge \dfrac{\alpha}{4} \in \mathrm{IV}\right)\right]$.
+			\end{enumerate}
+
+			\begin{enumerate}[label=(\arabic*)]
+				\item \defword{若$\sin \alpha \sqrt{1-\cos^2\alpha} - \cos \alpha \sqrt{1-\sin^2\alpha}=-1$, 则$\alpha \in \mathrm{IV}$.}
+					~\\
+					
+					\begin{align*}
+					\sin \alpha \sqrt{1-\cos^2\alpha} - \cos \alpha \sqrt{1-\sin^2\alpha}=-1 &\Rightarrow \sin \alpha \left\vert \sin \alpha \right\vert - \cos \alpha \left\vert \cos \alpha \right\vert =-1\\
+					&\Rightarrow \sin^2\alpha \cdot \mathrm{sgn}{\left(\sin\alpha\right)} - \cos^2\alpha \cdot \mathrm{sgn}{\left(\cos\alpha\right)} = -\sin^2\alpha - \cos^2\alpha.
+					\end{align*}
+					
+					考虑\defword{$\sin \alpha = 0 \Leftrightarrow \alpha = k\pi, k\in \ZZ$}, 有:
+
+					$$-\mathrm{sgn}{\left(\cos \alpha \right)} = -1,$$
+
+					即
+
+					$$\alpha = 2k\pi, k\in \ZZ.$$
+
+					考虑\defword{$\cos \alpha = 0 \Leftrightarrow \alpha = k\pi + \dfrac{\pi}{2}, k\in \ZZ$}, 有:
+
+					$$\mathrm{sgn}{\left(\sin \alpha \right)} = -1,$$
+
+					即
+
+					$$\alpha = 2k\pi + \frac{3}{2} \pi, k \in \ZZ.$$
+
+					考虑\defword{其余的$\alpha$}, 显然有$\sin \alpha < 0, \cos \alpha > 0$, 即$\alpha \in \mathrm{IV}$.
+
+					综上所述,
+
+					$$\alpha \in \bigcup_{k\in\ZZ} \left[2k\pi + \frac{3}{2}\pi, 2k\pi + 2\pi\right],$$
+
+					与原命题不符.
+
+				\item \defword{若$\displaystyle \sqrt{\frac{1+\sin \alpha}{1-\sin \alpha}} = \tan \alpha + \sec \alpha$, 则$\displaystyle \alpha \in \left(2k\pi - \frac{\pi}{2}, 2k\pi + \frac{\pi}{2}\right), k \in \ZZ$.}
+					~\\
+
+					\begin{align*}
+						\sqrt{\frac{1+\sin\alpha}{1-\sin\alpha}} &= \sqrt{\frac{(1+\sin\alpha)^2}{(1-\sin\alpha)(1+\sin\alpha)}}\\
+						&= \sqrt{\frac{(1+\sin\alpha)^2}{\cos^2\alpha}}\\
+						&= \frac{1 + \sin\alpha}{\left\vert\cos\alpha\right\vert}\\
+						&= \tan \alpha + \sec \alpha\\
+						&= \frac{\sin \alpha}{\cos \alpha} + \frac{1}{\cos \alpha}\\
+						&= \frac{1 + \sin \alpha}{\cos \alpha}.
+					\end{align*}
+
+					于是$\cos \alpha > 0 (\sin \alpha = -1 \Rightarrow \tan \alpha, \sec\alpha \ \mathrm{DNE})$, 故有
+
+					$$\alpha \in \bigcup_{k\in\ZZ} \left(2k\pi - \frac{\pi}{2}, 2k\pi + \frac{\pi}{2}\right),$$
+
+					与原命题相符.
+
+				\item \defword{若$\displaystyle \sqrt{\frac{1+\cos \alpha}{1-\cos \alpha}} - \sqrt{\frac{1-\cos \alpha}{1+\cos \alpha}}=-2\cot \alpha$, 则$\displaystyle \alpha \in \left(2k\pi - \pi, 2k\pi\right), k \in \ZZ$.}
+					~\\
+
+					\begin{align*}
+						\sqrt{\frac{1+\cos\alpha}{1-\cos\alpha}}-\sqrt{\frac{1-\cos\alpha}{1+\cos\alpha}} &= \sqrt{\frac{(1+\cos\alpha)^2}{(1-\cos\alpha)(1+\cos\alpha)}} - \sqrt{\frac{(1-\cos\alpha)^2}{(1+\cos\alpha)(1-\cos\alpha)}}\\
+						&= \frac{1+\cos\alpha}{\left\vert\sin\alpha\right\vert} - \frac{1-\cos\alpha}{\left\vert\sin\alpha\right\vert}\\
+						&= \mathrm{sgn}(\sin\alpha) \cdot 2 \frac{\cos\alpha}{\sin\alpha}\\
+						&= -2\cot\alpha\\
+						&= -2\frac{\cos\alpha}{\sin\alpha}.\\
+					\end{align*}
+
+					于是$\cos\alpha = 0$或$\sin\alpha < 0$, 故有
+
+					$$\alpha \in \left[\bigcup_{k\in\ZZ} \left(2k\pi - \pi, 2k\pi\right)\right] \cup \left[\bigcup_{k\in\ZZ} \left\{2k\pi - \frac{\pi}{2}, 2k\pi + \frac{\pi}{2}\right\}\right],$$
+
+					与原命题不符.
+
+				\item \defword{若$\alpha \in \mathrm{IV}$, 则 $\left[\exists \alpha: \left(\dfrac{\alpha}{2} \in \mathrm{II} \wedge \dfrac{\alpha}{4} \in \mathrm{II}\right)\right] \vee \left[\exists \alpha: \left(\dfrac{\alpha}{2} \in \mathrm{IV} \wedge \dfrac{\alpha}{4} \in \mathrm{IV}\right)\right]$}.
+					~\\
+
+					\begin{align*}
+					\alpha \in \mathrm{IV} &\Rightarrow \alpha \in \bigcup_{k\in\ZZ} \left(2k\pi+\frac{3}{2}\pi, 2k\pi + 2\pi\right)\\
+					&\Rightarrow \frac{\alpha}{2} \in \bigcup_{k\in\ZZ} \left(k\pi+\frac{3}{4}\pi, k\pi + \pi\right)\\
+					&\Rightarrow \frac{\alpha}{4} \in \bigcup_{k\in\ZZ} \left(\frac{k}{2}\pi+\frac{3}{8}\pi, \frac{k}{2}\pi + \frac{\pi}{2}\right).
+					\end{align*}
+
+					考虑\defword{$k=4n (n\in\ZZ)$}, 有$\dfrac{\alpha}{2} \in \mathrm{II}, \dfrac{\alpha}{4} \in \mathrm{I}$.
+
+					考虑\defword{$k=4n+1 (n\in\ZZ)$}, 有$\dfrac{\alpha}{2} \in \mathrm{IV}, \dfrac{\alpha}{4} \in \mathrm{II}$.
+
+					考虑\defword{$k=4n+2 (n\in\ZZ)$}, 有$\dfrac{\alpha}{2} \in \mathrm{II}, \dfrac{\alpha}{4} \in \mathrm{III}$.
+
+					考虑\defword{$k=4n+3 (n\in\ZZ)$}, 有$\dfrac{\alpha}{2} \in \mathrm{IV}, \dfrac{\alpha}{4} \in \mathrm{IV}$.
+
+					与原命题不符.
+
+			\end{enumerate}
+
+			综上, 真命题只有 (2).
+
+	\section{附加题}
+		\subsection{Q15}
+			\defword{15. } 记$f(\alpha)=\sin(\cos(\alpha)), g(\alpha)=\cos(\sin(\alpha)),$
+
+			\begin{enumerate}[label=(\arabic*)]
+				\item 解不等式: $f(\alpha)g(\alpha)>0$.
+				\item 当$\alpha\in\left(0, \dfrac{\pi}{2}\right)$, 证明: $f(\alpha)<g(\alpha)$.
+			\end{enumerate}
+			~\\
+
+			\begin{enumerate}[label=(\arabic*)]
+				\item 解不等式: $f(\alpha)g(\alpha)>0$.
+					~\\
+
+					\begin{align*}
+					f(\alpha)g(\alpha)&>0\\
+					\sin(\cos(\alpha))\cos(\sin(\alpha))&>0\\
+					\sin(\cos(\alpha))&>0\tag{$\sin(\alpha)\in[-1, 1], \forall x \in [-1, 1]: \cos(\alpha)>0$}\\
+					\cos(\alpha)&\in [-1, 1]\cap\bigcup_{k\in\ZZ}\left(2k\pi, 2k\pi + \pi\right)\\
+					\cos(\alpha)&\in (0, 1]\\
+					\alpha&\in \bigcup_{k\in\ZZ} \left(2k\pi - \frac{\pi}{2}, 2k\pi + \frac{\pi}{2}\right).
+					\end{align*}
+
+				\item 当$\alpha\in\left(0, \dfrac{\pi}{2}\right)$, 证明: $f(\alpha)<g(\alpha)$.
+					~\\
+
+					要证:
+
+					$$\forall \alpha\in\left(0, \dfrac{\pi}{2}\right): f(\alpha) < g(\alpha),$$
+
+					只需证:
+
+					$$\max_{\alpha\in\left(0, \dfrac{\pi}{2}\right)} f(\alpha) < \min_{\alpha\in\left(0, \dfrac{\pi}{2}\right)} g(\alpha),$$
+
+					由于$f(\alpha),  g(\alpha)$均连续, 只需证:
+
+					$$\max_{\alpha\in\left[0, \dfrac{\pi}{2}\right]} f(\alpha) < \min_{\alpha \in \left[0, \dfrac{\pi}{2}\right]} g(\alpha).$$
+
+					$\cos(\alpha)$在$\alpha\in\left[0, \dfrac{\pi}{2}\right]$上单调递减且有$\cos(\alpha)\in[0, 1]$, $\sin(\alpha)$在$\alpha\in[0, 1]$上单调递增, 故$f(\alpha)$在$\alpha\in\left[0, \dfrac{\pi}{2}\right]$单调递减.
+
+					$\sin(\alpha)$在$\alpha\in\left[0, \dfrac{\pi}{2}\right]$上单调递增且有$\sin(\alpha)\in[0, 1]$, $\cos(\alpha)$在$\alpha\in[0, 1]$上单调递减, 故$g(\alpha)$在$\alpha\in\left[0, \dfrac{\pi}{2}\right]$单调递减.
+
+					于是有
+
+					$$\max_{\alpha\in\left[0, \dfrac{\pi}{2}\right]} f(\alpha) = f(0) = \sin(1), \min_{\alpha \in \left[0, \dfrac{\pi}{2}\right]} g(\alpha) = g\left(\frac{\pi}{2}\right)=\cos(1).$$
+
+					由$\sin(\alpha)$在$\alpha\in\left[0, \dfrac{\pi}{2}\right]$上单调增, $\cos(\alpha)$在$\alpha\in\left[0, \dfrac{\pi}{2}\right]$上单调减, $\sin\left(\dfrac{\pi}{4}\right)=\cos\left(\dfrac{\pi}{4}\right)=\dfrac{\sqrt{2}}{2}$, 而有$1>\dfrac{\pi}{4}$, 则有
+
+					$$\cos(1)<\sin(1),$$
+
+					\textbf{\textcolor{allanred}{此证法不可行. (但是对于$\forall x\in I: f(x)<A$的题证明$\displaystyle \max_{x\in I} f(x)<A$依然不失作为一个好的做法存在)}}
+
+					考虑到$x\sim \sin x (x\rightarrow 0)$ (即$x$和$\sin x$是$x\rightarrow 0$的等价无穷小, 即$\displaystyle \lim_{x\rightarrow 0} \dfrac{\sin x}{x} = 1$), 构造$\cos x$作为中间变量, 利用放缩法解决.
+
+					下证: \defword{$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): f(\alpha) < \cos (\alpha)$}.
+
+					要证:
+
+					$$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): f(\alpha) < \cos (\alpha),$$
+
+					即证:
+
+					$$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): \sin(\cos(\alpha)) < \cos (\alpha),$$
+
+					即证:
+
+					$$\forall x \in (0, 1): \sin(x) < x.$$
+
+					下证: \defword{$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): \cos (\alpha) < g(\alpha)$}.
+
+					要证:
+
+					$$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): \cos (\alpha) < g(\alpha),$$
+
+					即证:
+
+					$$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): \cos (\alpha) < \cos(\sin(\alpha)),$$
+
+					只需证:
+
+					$$\forall \alpha \in \left(0, \dfrac{\pi}{2}\right): \alpha > \sin(\alpha). \eqno{(\cos(x)\text{在}x\in\left(0, \dfrac{\pi}{2}\right)\text{上单调递减}, \alpha \in \left(0, \dfrac{\pi}{2}\right), \sin(\alpha) \left(0, 1\right) \subset \left(0, \dfrac{\pi}{2}\right))}$$
+
+					因此要证原命题, 只需证
+
+					$$\forall x \in \left(0, \dfrac{\pi}{2}\right): \sin(x) < x.$$
+
+					使用单位圆进行此命题的证明:
+
+					$$\begin{tikzpicture}[scale=1.5, baseline=0]
+			    		\draw[black, ->] (-1.5,  0)--( 1.5,  0) node at (1/2, 0) [anchor=north] {$1$};
+			    		\draw[black, ->] ( 0, -1.5)--( 0,  1.5);
+			    		\draw[black] (1/2, {sqrt(3)/2}) arc[start angle=60, end angle=360, radius=1];
+			    		\draw[black] (0, 0)--(1/2, {sqrt(3)/2}) node at (0, -0.05) [anchor=south west] {$x$};
+			    		\draw[blue] (1/2, 0)--(1/2, {sqrt(3)/2});
+			    		\draw[red] (1, 0)--(1/2, {sqrt(3)/2});
+			    		\draw[orange] (1, 0) arc[start angle=0, end angle=60, radius=1];
+			    	\end{tikzpicture}
+			    	$$
+
+			    	显然有
+
+			    	$$\textcolor{blue}{\sin(x)}<\textcolor{red}{l}<\textcolor{orange}{x}.$$
+
+			    	故得证.
+
+			    	又考虑到统一外函数三角名:
+
+			    	$$g(\alpha)=\cos(\sin(\alpha))=\sin\left(\dfrac{\pi}{2}-\sin(\alpha)\right).$$
+
+			    	即证：
+
+			    	$$\forall x\in \left(0, \frac{\pi}{2}\right): \sin(\cos(\alpha))<\sin\left(\dfrac{\pi}{2}-\sin(\alpha)\right),$$
+
+			    	即证:
+
+			    	$$\forall x\in \left(0, \frac{\pi}{2}\right): \cos(\alpha)<\dfrac{\pi}{2}-\sin(\alpha),$$
+
+			    	即证:
+
+			    	$$\forall x\in \left(0, \frac{\pi}{2}\right): \sin(\alpha)+\cos(\alpha)<\dfrac{\pi}{2}.$$
+
+			    	由\defword{辅助角公式}:
+
+			    	$$a\sin(x)+b\cos(x)=\sqrt{a^2+b^2} \sin\left(x+\arctan \dfrac{a}{b}\right) (a>0)$$
+
+			    	有
+
+			    	$$\sin(x)+\cos(x)=\sqrt{2} \sin\left(\dfrac{\pi}{4}+x\right)\leq\sqrt{2}<\dfrac{\pi}{2},$$
+
+			    	得证.
+
+			\end{enumerate}
+
+	\section{特别致谢}
+		\textbf{\textcolor{allandarkblue}{stOOrz-Mathematical-Modelling-Group/MathxStudio}}: 提供排版模版.
+
+\end{document}
