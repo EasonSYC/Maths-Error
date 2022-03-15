@@ -1,0 +1,56 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{3 集合测验''（简单题）}
+\date{2021年09月22日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}
+		
+		\item
+			已知集合$A=\left\{x|-8\leq x<5\right\}$，非空集合$B=\left\{x|t+1\leq x\leq 2t-1\right\}$. 若$A\cap B=\emptyset$，则实数$t$的取值范围是？.
+
+			~\\
+			$B\neq \emptyset \Rightarrow 2t-1 \geq t+1 \Rightarrow t\geq 2.$
+
+			$A\cap B=\emptyset \Rightarrow t+1 \geq 5 \ \rm or \  2t-1 < -8 \Rightarrow t\geq 4 \ \rm or \ t < -\frac{7}{2}.$
+
+			$\therefore t \geq 4.$
+
+		~\\
+
+		\item
+			（题简）求当方程$x^2-(2-a)x+5-a=0$的两根都大于$t=1$时$a$的取值范围.
+
+			~\\
+			$$
+			\begin{aligned}
+				&\left\{x|x^2-(2-a)x+5-a=0\right\}\subseteq(1,+\infty)\\
+				\Rightarrow&\left\{
+				\begin{array}{l}
+					\Delta=(2-a)^2-4(5-a)=a^2-16\geq0\\
+					(x_1-1)(x_2-1)=x_1x_2-(x_1+x_2)+1=5-a+a-2+1=4>0\\
+					(x_1-1)+(x_2-1)=x_1+x_2-2=-a>0\\
+				\end{array}
+				\right.\\
+				\Rightarrow&a\in\left(-\infty,-4\right].
+			\end{aligned}
+			$$
+
+	\end{enumerate}
+
+\end{document}

@@ -1,0 +1,75 @@
+%!TEX TX-program = xelatex
+\documentclass[8pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proof}{Proof}
+
+\author{高一（6）班\ 邵亦成\ 26号}
+\title{3 集合测验''（难题）}
+\date{2021年09月22日}
+
+\geometry{a4paper, scale=0.8}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{enumerate}
+
+		\item
+			有限集$S$的全部元素的乘积，称为这个数集$S$的积数，例如集合$\{2\}$的积数是$2$，集合$\{2,3\}$的积数是$6$.
+
+			\begin{enumerate}[ (1) ]
+
+				\item 求集合$M=\left\{\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}\right\}$的所有非空子集的积数之和.
+
+				\item 求集合$M=\left\{x|x=\frac{1}{n},2\leq n\leq100, n\in\mathbb{N}\right\}$的所有非空子集的积数之和.
+
+			\end{enumerate}
+
+			~\\
+
+			下证\textbf{引理}：集合$M$的积数$=$$$\prod_{x\in M}(1+x)-1.$$
+
+			令$|M|=n$，构造方程
+
+			$$f(x)=\prod_{k\in M}(x-k)=0.$$
+
+			展开，得
+
+			$$x^n+a_1x^{n-1}+a_2x^{n-2}+\cdots+a_{n-1}x+a_n=0.$$
+
+			由高次方程的Vieta定理，有:
+
+			$$
+			\left\{
+			\begin{array}{rcl}
+			\sum_{1\leq i \leq n}x_i&=&-a_1\\
+			\sum_{1\leq i < j \leq n}x_ix_j&=&a_2\\
+			&\vdots&\\
+			\prod_{1\leq i \leq n}x_i&=&(-1)^{n}a_n\\
+			\end{array}
+			\right..
+			$$
+
+			易得，所求式$=-a_1+a_2-\cdots+(-1)^{n}a_n$.
+
+			若$n$是偶数，所求式$=f(-1)-1$；若$n$是奇数，所求式$=-f(-1)-1$.
+
+			代入化简，得集合$M$的积数$=g(M)=$$$\prod_{x\in M}(1+x)-1.$$
+
+			将$M=\left\{\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}\right\}$代入得$g(M)=2$.
+
+			将$M=\left\{x|x=\frac{1}{n},2\leq n\leq100, n\in\mathbb{N}\right\}$代入得$g(M)=\frac{99}{2}$.
+
+	\end{enumerate}
+
+\end{document}
