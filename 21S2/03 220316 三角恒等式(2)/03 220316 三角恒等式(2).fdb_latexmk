@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1647411491 "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2).pdf" "03 220316 三角恒等式(2)" 1647411492
-  "03 220316 三角恒等式(2).xdv" 1647411491 27436 0e3b3d631365973a8a76f10208fefd04 "xelatex"
+["xdvipdfmx"] 1647414071 "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2).pdf" "03 220316 三角恒等式(2)" 1647414073
+  "03 220316 三角恒等式(2).xdv" 1647414071 42916 336c39a5795abd224317f72fee3e8428 "xelatex"
   (generated)
   "03 220316 三角恒等式(2).pdf"
-["xelatex"] 1647411489 "03 220316 三角恒等式(2).tex" "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2)" 1647411492
+["xelatex"] 1647414069 "03 220316 三角恒等式(2).tex" "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2)" 1647414072
   "/System/Library/Fonts/Menlo.ttc" 1645859107 2155812 30e8e1ead3db825f24e1d4bdb001343e ""
   "/System/Library/Fonts/PingFang.ttc" 1645859107 77143236 99e2de86304bbeebc5f20fc3e427d415 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -29,6 +29,8 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm" 1254269338 12076 b54175e02101bea1addf6b2d0197ed12 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx5.tfm" 1254269338 12036 f4da809d8425d0bc7356fb79ff6b7dc2 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx7.tfm" 1254269338 12072 feea2d4511ce6b67cf0049876d122c6b ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm" 1254269338 12056 7e13df7fe4cbce21b072ba7c4f4deb6e ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm" 1254269338 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm" 1254269338 12156 ca1ae6a3c8564e89597f1f993fba1608 ""
@@ -227,12 +229,12 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1635337791 5133932 ea968cb54aa761411f5a7fb1a3ece1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "03 220316 三角恒等式(2).aux" 1647411491 1088 b0f24b3e127b305268d950f093286659 "xelatex"
-  "03 220316 三角恒等式(2).out" 1647411491 209 b5ceda0a11f968bf4e3e19ce01190868 "xelatex"
-  "03 220316 三角恒等式(2).tex" 1647411488 4484 98f6deac430d85215ec8b123eca6f30e ""
-  "allan.sty" 1647408150 11360 0bfecd1d8d22f5050cb0405903482423 ""
+  "03 220316 三角恒等式(2).aux" 1647414071 1194 2c34760735d24878ee7c254d04579ede "xelatex"
+  "03 220316 三角恒等式(2).out" 1647414071 276 d857bf0b519b1cf9b7dc3fdb15d74bce "xelatex"
+  "03 220316 三角恒等式(2).tex" 1647414069 7626 70c071390ead2caf7aefff9effd51bea ""
+  "allan.sty" 1647412670 11411 7d7de72a4a3d6da6c01936b2dc38be5a ""
   (generated)
-  "03 220316 三角恒等式(2).log"
-  "03 220316 三角恒等式(2).aux"
-  "03 220316 三角恒等式(2).xdv"
   "03 220316 三角恒等式(2).out"
+  "03 220316 三角恒等式(2).log"
+  "03 220316 三角恒等式(2).xdv"
+  "03 220316 三角恒等式(2).aux"

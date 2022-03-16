@@ -1355,4 +1355,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
 OUTPUT 03 220316 三角恒等式(2).xdv
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx7.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx5.tfm
 INPUT 03 220316 三角恒等式(2).aux

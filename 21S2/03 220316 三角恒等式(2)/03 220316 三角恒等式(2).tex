@@ -98,13 +98,93 @@
 			\begin{align*}
 				\YS &= \frac{1+\sin x}{\cos x} \cdot \left[\frac{2 \sin x \cos x}{1+\cos\left(\frac{\pi}{2}-x\right)}-\frac{\cos x}{1+\sin x}\right]\\
 				&= \frac{1+\sin x}{\cos x} \cdot \left[\frac{2 \sin x \cos x}{1+\sin x}-\frac{\cos x}{1+\sin x}\right]\\
-				&= 2\sin x-1.
+				&= \answer{$2\sin x-1$}.
 			\end{align*}
 		~\\
 
-		\defword{12. }
+		\defword{12. }已知$\alpha \in \left(0, \dfrac{\pi}{2}\right)$有$3\sin \alpha - 4\cos \alpha = 1$, 求$\tan \alpha$.
+
+		\defword{解析. }辅助角公式, 同角三角比, 和角公式.
+			\begin{align*}
+				3\sin \alpha - 4\cos \alpha = 5\sin \left(\alpha - \arctan\frac{4}{3}\right)=1 &\Rightarrow \sin\left(\alpha - \arctan\frac{4}{3}\right)=\dfrac{1}{5}, \alpha-\arctan\dfrac{4}{3}\in\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\\
+				&\Rightarrow \tan \alpha = \frac{\tan\left(\alpha - \arctan\frac{4}{3}\right) \cdot \frac{4}{3}}{1-\tan\left(\alpha - \arctan\frac{4}{3}\right)\cdot\frac{4}{3}}=\answer{$\frac{6+\sqrt{6}}{4}$}.
+			\end{align*}
+		~\\
+
+		\defword{13. }已知$\cos\alpha \in \left[\dfrac{1}{2}, 1\right)$, 求$\tan \dfrac{\alpha}{2}(\sin \alpha + \tan \alpha)$的最大值.
+
+		\defword{解析. }半角公式, 同角三角比, 函数在区间上的极值.
+			\begin{align*}
+				\max_{\cos\alpha \in \left[\frac{1}{2}, 1\right)} \tan \dfrac{\alpha}{2}(\sin \alpha + \tan \alpha) &= \max_{\cos\alpha \in \left[\frac{1}{2}, 1\right)} \frac{1-\cos \alpha}{\sin \alpha} \left(\sin \alpha + \frac{\sin \alpha}{\cos \alpha}\right)\\
+				&= \max_{\cos\alpha \in \left[\frac{1}{2}, 1\right)} 1-\cos\alpha + \frac{1-\cos\alpha}{\cos\alpha}\\
+				&= \max_{\cos\alpha \in \left[\frac{1}{2}, 1\right)} \frac{1}{\cos \alpha} - \cos \alpha\\
+				&= \at{\frac{1}{\cos \alpha}-\cos \alpha}{\cos \alpha = \frac{1}{2}}\\
+				&= \answer{$\frac{3}{2}$}.
+			\end{align*}
+		~\\
+
+		\defword{14. }利用两倍角公式及三倍角公式$\sin 3\theta = 3\sin \theta - 4\sin^3 \theta, \cos 3\theta = 4\cos^3 \theta - 3\cos \theta$求$\sin 18\degree$.
+
+		\defword{解析. }同角三角比, 两倍角公式, 三倍角公式.
+
+			考虑$\cos 54\degree$ ($90\degree - 3\times 18\degree = 2\times 18\degree$), 有
+
+			$$\cos 54\degree = 4\cos^3 18\degree - 3\cos 18\degree = \sin 36\degree = 2\sin 18\degree \cos 18\degree$$
+
+			即
+
+			$$4\cos^3 18\degree - 3\cos 18\degree = 2\sin 18\degree \cos 18\degree.$$
+
+			两边同时除以$\cos 18\degree$, 带入$\cos 18\degree = \sqrt{1 - \sin^2 18\degree}$, 有
+
+			$$4(1-\sin^2 18\degree)-3=2\sin 18\degree$$
+
+			即
+
+			$$4\sin^2 18\degree + 2\sin 18\degree + 1 = 0$$
+
+			有
+
+			$$\sin 18\degree = \frac{-1\pm\sqrt{5}}{4} \text{(舍负)}.$$
+
+			综上, \answer{$\sin 18\degree = \dfrac{-1+\sqrt{5}}{4}$}.
+
+	\section{附加题}
+		\defword{15. } 已知$\dfrac{\sin \alpha}{\sin \beta}=p, \dfrac{\cos \alpha}{\cos \beta}=q, \abs{p} \neq 1, q\neq 0, $用$p, q$表达$\tan \alpha \cdot \tan \beta$.
+
+		\defword{解析. }同角三角比.
+
+		由已知, 显然有
+
+		$$\sin \alpha = p\sin \beta \eqno{(1)}$$
+
+		和
+
+		$$\cos \alpha = q \cos \beta \eqno{(2)}.$$
+
+		考虑$(1)/(2)$得
+
+		$$\tan \alpha = \frac{p}{q} \tan \beta.$$
+
+		两边同时乘以$\tan \beta$得
+
+		$$\tan \alpha \tan \beta = \frac{p}{q} \tan^2 \beta.$$
+
+		考虑$(1)^2 + (2)^2$得
+
+		$$\sin^2 \alpha + \cos^2 \alpha = 1 = p^2 \sin^2 \beta + q^2 \cos^2 \beta,$$
+
+		即
+
+		$$\sin^2 \beta (p^2 - 1)=\cos^2 (1 - q^2),$$
+
+		即
+
+		$$\tan^2 \beta = \frac{1-q^2}{p^2-1}.$$
+
+		故\answer{$\YS=\dfrac{p(1-q^2)}{q(1-p^2)}$}.
 
 	\section{特别致谢}
-		\textbf{\textcolor{allangreen}{MathxStudio/LaTeX-Templates}}: 提供排版模版.
+		\textbf{\textcolor{allangreen}{MathxStudio/LaTeX-Templates}}: 提供排版模版的模版.
 
 \end{document}
