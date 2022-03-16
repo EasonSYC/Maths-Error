@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1647414370 "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2).pdf" "03 220316 三角恒等式(2)" 1647414371
-  "03 220316 三角恒等式(2).xdv" 1647414370 42912 f2aabacc1148eb27e214d781d2fe8e7b "xelatex"
+["xdvipdfmx"] 1647415029 "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2).pdf" "03 220316 三角恒等式(2)" 1647415030
+  "03 220316 三角恒等式(2).xdv" 1647415029 42916 5f201dd907689e8029513c673f03c160 "xelatex"
   (generated)
   "03 220316 三角恒等式(2).pdf"
-["xelatex"] 1647414368 "03 220316 三角恒等式(2).tex" "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2)" 1647414371
+["xelatex"] 1647415027 "03 220316 三角恒等式(2).tex" "03 220316 三角恒等式(2).xdv" "03 220316 三角恒等式(2)" 1647415030
   "/System/Library/Fonts/Menlo.ttc" 1645859107 2155812 30e8e1ead3db825f24e1d4bdb001343e ""
   "/System/Library/Fonts/PingFang.ttc" 1645859107 77143236 99e2de86304bbeebc5f20fc3e427d415 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -229,12 +229,12 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1635337791 5133932 ea968cb54aa761411f5a7fb1a3ece1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "03 220316 三角恒等式(2).aux" 1647414370 1194 2c34760735d24878ee7c254d04579ede "xelatex"
-  "03 220316 三角恒等式(2).out" 1647414370 276 d857bf0b519b1cf9b7dc3fdb15d74bce "xelatex"
-  "03 220316 三角恒等式(2).tex" 1647414367 7626 ba0fb5179def5a964d54ee69f378fa42 ""
+  "03 220316 三角恒等式(2).aux" 1647415029 1194 2c34760735d24878ee7c254d04579ede "xelatex"
+  "03 220316 三角恒等式(2).out" 1647415029 276 d857bf0b519b1cf9b7dc3fdb15d74bce "xelatex"
+  "03 220316 三角恒等式(2).tex" 1647415026 7626 807dd1855adf02b6ed6c117897b6fe6f ""
   "allan.sty" 1647412670 11411 7d7de72a4a3d6da6c01936b2dc38be5a ""
   (generated)
-  "03 220316 三角恒等式(2).xdv"
-  "03 220316 三角恒等式(2).aux"
-  "03 220316 三角恒等式(2).log"
   "03 220316 三角恒等式(2).out"
+  "03 220316 三角恒等式(2).aux"
+  "03 220316 三角恒等式(2).xdv"
+  "03 220316 三角恒等式(2).log"
