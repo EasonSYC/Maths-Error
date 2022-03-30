@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1648085846 "04 220323 三角恒等式与正余弦定理.xdv" "04 220323 三角恒等式与正余弦定理.pdf" "04 220323 三角恒等式与正余弦定理" 1648085847
-  "04 220323 三角恒等式与正余弦定理.xdv" 1648085846 53824 b604b68909ac3ae7b89a547f967274c2 "xelatex"
+["xdvipdfmx"] 1648370573 "04 220323 三角恒等式与正余弦定理.xdv" "04 220323 三角恒等式与正余弦定理.pdf" "04 220323 三角恒等式与正余弦定理" 1648370574
+  "04 220323 三角恒等式与正余弦定理.xdv" 1648370573 53412 8023e5b26a455124c025dba239cb5ad0 "xelatex"
   (generated)
   "04 220323 三角恒等式与正余弦定理.pdf"
-["xelatex"] 1648085844 "04 220323 三角恒等式与正余弦定理.tex" "04 220323 三角恒等式与正余弦定理.xdv" "04 220323 三角恒等式与正余弦定理" 1648085847
+["xelatex"] 1648370570 "04 220323 三角恒等式与正余弦定理.tex" "04 220323 三角恒等式与正余弦定理.xdv" "04 220323 三角恒等式与正余弦定理" 1648370574
   "/System/Library/Fonts/Menlo.ttc" 1645859107 2155812 30e8e1ead3db825f24e1d4bdb001343e ""
   "/System/Library/Fonts/PingFang.ttc" 1645859107 77143236 99e2de86304bbeebc5f20fc3e427d415 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -228,9 +228,9 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1647950100 5417949 c190bccb4a883502ce03bd1d175e169e ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "04 220323 三角恒等式与正余弦定理.aux" 1648085846 1194 6272faf547ffa2bccc5a6b412dc5d1ac "xelatex"
-  "04 220323 三角恒等式与正余弦定理.out" 1648085846 276 d857bf0b519b1cf9b7dc3fdb15d74bce "xelatex"
-  "04 220323 三角恒等式与正余弦定理.tex" 1648085801 9745 0d0549986fc55d3b9ce786deb2167298 ""
+  "04 220323 三角恒等式与正余弦定理.aux" 1648370573 1194 6272faf547ffa2bccc5a6b412dc5d1ac "xelatex"
+  "04 220323 三角恒等式与正余弦定理.out" 1648370573 276 d857bf0b519b1cf9b7dc3fdb15d74bce "xelatex"
+  "04 220323 三角恒等式与正余弦定理.tex" 1648085864 9728 497a55b1b149965752f41d3c3cd5d0ec ""
   "allan-eason.sty" 1648085834 12149 efb76e2742e7f506678ea0bf5869a5e2 ""
   (generated)
   "04 220323 三角恒等式与正余弦定理.aux"
