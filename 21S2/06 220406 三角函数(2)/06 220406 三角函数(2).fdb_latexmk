@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1649256007 "06 220406 三角函数(2).xdv" "06 220406 三角函数(2).pdf" "06 220406 三角函数(2)" 1649256008
-  "06 220406 三角函数(2).xdv" 1649256007 123888 3daf16f128b03e299f7ca872bba25093 "xelatex"
+["xdvipdfmx"] 1649256366 "06 220406 三角函数(2).xdv" "06 220406 三角函数(2).pdf" "06 220406 三角函数(2)" 1649256367
+  "06 220406 三角函数(2).xdv" 1649256365 123884 cedf04b85d9596b7938b3849743335ab "xelatex"
   (generated)
   "06 220406 三角函数(2).pdf"
-["xelatex"] 1649256003 "06 220406 三角函数(2).tex" "06 220406 三角函数(2).xdv" "06 220406 三角函数(2)" 1649256008
+["xelatex"] 1649256361 "06 220406 三角函数(2).tex" "06 220406 三角函数(2).xdv" "06 220406 三角函数(2)" 1649256367
   "/System/Library/Fonts/Menlo.ttc" 1645859107 2155812 30e8e1ead3db825f24e1d4bdb001343e ""
   "/System/Library/Fonts/PingFang.ttc" 1645859107 77143236 99e2de86304bbeebc5f20fc3e427d415 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -230,9 +230,9 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1647950100 5417949 c190bccb4a883502ce03bd1d175e169e ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "06 220406 三角函数(2).aux" 1649256007 1085 71d1f74a09cd1c6dd445c96dff81cafd "xelatex"
-  "06 220406 三角函数(2).out" 1649256007 201 9bacbb832a7cae7d9dee2cd06e140b8e "xelatex"
-  "06 220406 三角函数(2).tex" 1649256002 10666 8c10227f7e7ae665975663492e8dc8d7 ""
+  "06 220406 三角函数(2).aux" 1649256365 1085 71d1f74a09cd1c6dd445c96dff81cafd "xelatex"
+  "06 220406 三角函数(2).out" 1649256365 201 9bacbb832a7cae7d9dee2cd06e140b8e "xelatex"
+  "06 220406 三角函数(2).tex" 1649256340 10665 806553256fd3871db66f65195c0b7e30 ""
   "allan-eason.sty" 1649254674 12223 ef2d6a554e41e7700528ed7bf5e6f4be ""
   (generated)
   "06 220406 三角函数(2).aux"
