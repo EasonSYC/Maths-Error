@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1648629736 "05 220330 三角函数.xdv" "05 220330 三角函数.pdf" "05 220330 三角函数" 1648629738
-  "05 220330 三角函数.xdv" 1648629736 42648 e27ccf586dc6bff214810488ac8017cb "xelatex"
+["xdvipdfmx"] 1649256259 "05 220330 三角函数.xdv" "05 220330 三角函数.pdf" "05 220330 三角函数" 1649256260
+  "05 220330 三角函数.xdv" 1649256258 42608 7407fcd552ed9305e8ead83d5d8170d2 "xelatex"
   (generated)
   "05 220330 三角函数.pdf"
-["xelatex"] 1648629734 "05 220330 三角函数.tex" "05 220330 三角函数.xdv" "05 220330 三角函数" 1648629738
+["xelatex"] 1649256257 "05 220330 三角函数.tex" "05 220330 三角函数.xdv" "05 220330 三角函数" 1649256260
   "/System/Library/Fonts/Menlo.ttc" 1645859107 2155812 30e8e1ead3db825f24e1d4bdb001343e ""
   "/System/Library/Fonts/PingFang.ttc" 1645859107 77143236 99e2de86304bbeebc5f20fc3e427d415 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -159,6 +159,7 @@
   "/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def" 1639348191 2351 44605f23e4e0e2a54792838449d999c2 ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2021/texmf-dist/tex/latex/extarrows/extarrows.sty" 1584654186 1697 06e93f9e60065f4da4f2834dfb6d2fa2 ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1612734021 17086 7ed8cbc4d361ec87392817e0dd4f65ec ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty" 1642282977 162076 2f6d31c4632f2730c57b9c0fda038e15 ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg" 1532898934 549 c4adac819276241fea8eb79c5ab7b99e ""
@@ -229,10 +230,10 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1647950100 5417949 c190bccb4a883502ce03bd1d175e169e ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "05 220330 三角函数.aux" 1648629736 1085 71f5dc4c53396e768756f337d64ccf67 "xelatex"
-  "05 220330 三角函数.out" 1648629736 201 9bacbb832a7cae7d9dee2cd06e140b8e "xelatex"
-  "05 220330 三角函数.tex" 1648629734 7390 331674041cd6c338997e159d99994c5c ""
-  "allan-eason.sty" 1648624463 12199 6540d4ed4d592ddb53adae6b1cd799c1 ""
+  "05 220330 三角函数.aux" 1649256258 1085 71f5dc4c53396e768756f337d64ccf67 "xelatex"
+  "05 220330 三角函数.out" 1649256258 201 9bacbb832a7cae7d9dee2cd06e140b8e "xelatex"
+  "05 220330 三角函数.tex" 1649256256 7374 637cca6a5aba3ff6287bade8b00f8ec8 ""
+  "allan-eason.sty" 1649254674 12223 ef2d6a554e41e7700528ed7bf5e6f4be ""
   (generated)
   "05 220330 三角函数.aux"
   "05 220330 三角函数.log"
