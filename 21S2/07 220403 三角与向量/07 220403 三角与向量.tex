@@ -298,15 +298,39 @@
 						\ansmath{\omega \in [1, 4).}
 					\]
 
-				\item 若\(\exists a \in \RR: f(x)\)在\(\left[a - \dfrac{\pi}{6}, a + \dfrac{\pi}{6} \right]\)上能同时取到最大值和最小值, 且方程\(2f(x)=5\)在\([0, 2\pi]\)内至多有\(7\)个实数解, 求该方程在\([0, 2\pi]\)内所有解之和的取值范围.
+				\item 若\(\exists a \in \RR: f(x)\)在\(\left[a - \dfrac{\pi}{6}, a + \dfrac{\pi}{6} \right]\)上能同时取到最大值和最小值, 且方程\(2f(x)=5\)在\([0, 2\pi]\)内至多有\(7\)个实数解, 求该方程在\([0, 2\pi]\)内所有解之和的取值范围. \answord{\(\left[6\pi, \dfrac{23\pi}{3}\right]\).}
 
 					\answord{解析. }三角函数的最值性, 三角方程.
+
+					\begin{align*}
+						2f(x) = 5 &\Rightarrow \sin \left(\omega x + \frac{2 \pi}{3}\right) = \frac{\sqrt{3}}{2}\\
+						          &\Rightarrow \omega x + \frac{2\pi}{3} = 2k\pi + \frac{\pi}{3} \lgor \omega + \frac{2\pi}{3} = 2k\pi + \frac{2\pi}{3}, k\in \ZZ\\
+						          &\Rightarrow \omega x = 2k\pi - \frac{\pi}{3} \lgor \omega x = 2k\pi, k\in \ZZ.
+					\end{align*}
+
+					\[
+						\exists a\in \RR \Rightarrow \frac{T}{2} \leq \frac{\pi}{3} \Rightarrow \frac{\pi}{\omega} \leq \frac{\pi}{3} \Rightarrow \omega \geq 3.
+					\]
+
+					\(\omega x\)所对应的值为\(\displaystyle \left\{0, \frac{5\pi}{3}, 2\pi, \frac{11\pi}{3}, 4\pi, \frac{17\pi}{3}, 6\pi\right\}\), 注意到
+
+					\[
+						\omega x \in [0, 2\omega \pi] \supseteq [0, 6\pi],
+					\]
+
+					因此有
+
+					\[
+						6\pi \leq 2\omega \pi \leq \frac{23\pi}{3} \Rightarrow \omega \in \left[3, \frac{23}{6}\right].
+					\]
+
+					解的和为\(\dfrac{23\pi}{\omega}\), 即解的和的取值范围为\answord{\(\left[6\pi, \dfrac{23\pi}{3}\right]\)}.
 
 			\end{enumerate}
 
 	\section{特别致谢}
-		\refword{鸭鸭}, \refword{stOOrz\_OwenXu}, \refword{stOOrz\_BubbleTea }and \refword{Anthan. }提供初版答案参考.
+		\refword{鸭鸭}, \refword{stOOrz\_OwenXu}, \refword{stOOrz\_BubbleTea}, \refword{Anthan }and \refword{stOOrz\_Jacky\_Chen. }提供初版答案参考.
 
-		\refword{stOOrz\_AFOer\_xrh}, \refword{stOOrz\_Jasonying }and \refword{stOOrz\_Jacky\_Chen. }指出预览版中出现的逻辑错误.
+		\refword{stOOrz\_AFOer\_xrh }and \refword{stOOrz\_Jasonying. }指出预览版中出现的逻辑错误.
 
 \end{document}
