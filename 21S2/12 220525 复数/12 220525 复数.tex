@@ -1,0 +1,279 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: 12 220525 复数
+% Author: Eason S.
+% Date: 220525
+% Institude: Shanghai Experimental School
+% Email: eason.syc@icloud.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: https://github.com/EasonSYC/Maths_Error
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{220525}
+\newcommand{\Test}{复数}
+
+\newcommand{\Author}{Eason S.}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Date}\ \textcolor{allancyan}{\Test}\ 题目选解}
+
+\author{\Author}
+\title{\Title}
+\date{}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{填空题}
+	
+		\begin{easonproblem}
+			已知\(z \in \CC\)满足\((1+i)z=2\), 则\(\Im (z) = \)?.
+			\subproblem
+			\answord{\(-1\).} 复数的实部和虚部.
+		\end{easonproblem}
+
+		\begin{easonproblem}
+			若复数\(2+i\)是\(\RR[x]\)上的多项式\(x^2+px+q\)的一个虚数根, 则\(pq = \)?.
+			\subproblem
+			\answord{\(-20\).} \(\PP_2[x]\)上的多项式的根; \(\PP[x]\)上的多项式的根的Vieta定理.
+		\end{easonproblem}
+
+		\begin{easonproblem}
+			关于\(x\)的方程\(x^2 + 4x + k = 0\)有一个根为\(-2 + 3i\), 则实数\(k = \)?.
+			\subproblem
+			\answord{\(13\).} \(\PP_2[x]\)上的多项式的根.
+		\end{easonproblem}
+
+		\begin{easonbigproblem}
+			复数\(z = \left(1-\sqrt{3}i\right)^5\), 则\(\arg z = \)?.
+			\subbigproblem
+			\answord{\(\displaystyle \frac{\pi}{3}\).} 复数的辐角; 复数的指数表示.
+			\begin{align}
+				z   &=	\left(1 - \sqrt{3}i\right)^5 \\
+					&=	\left[2 \exp \left(5 i \cdot \frac{\pi}{3}\right)\right]^5\\
+					&=	32 \exp \left(25 i \cdot \frac{\pi}{3}\right)\\
+					&=	32 \exp \left(i \cdot \frac{\pi}{3}\right).
+			\end{align}
+			于是有\(\abs{z} = 32, \arg z = \displaystyle \frac{\pi}{3}\).
+		\end{easonbigproblem}
+
+		\begin{easonbigproblem}
+			计算
+			\begin{displaymath}
+				\left(\frac{1}{2} + \frac{\sqrt{3}}{2} i\right) \div \left[4 \left(\cos \frac{\pi}{12} + i \sin \frac{\pi}{12}\right)\right].
+			\end{displaymath}
+			\subbigproblem
+			\answord{\(\displaystyle \frac{\sqrt{2}}{8} + \frac{\sqrt{2}}{8}i\).} 复数的指数表示.
+			\begin{align}
+				\left(\frac{1}{2} + \frac{\sqrt{3}}{2} i\right) \div \left[4 \left(\cos \frac{\pi}{12} + i \sin \frac{\pi}{12}\right)\right]	&=	\exp \left(i \cdot \frac{\pi}{3}\right) \div 4\exp \left(i \cdot  \frac{\pi}{12}\right)\\
+				&= \frac{1}{4} \exp \left(i \cdot \pi / 4\right)\\
+				&= \frac{\sqrt{2}}{8} + \frac{\sqrt{2}}{8}i.
+			\end{align}
+		\end{easonbigproblem}
+
+		\begin{easonproblem}
+			若复数\((1 + ai)^2 \in \II \setminus \left\{0\right\}\), 则\(\abs{1+ai} = \)?.
+			\subproblem
+			\answord{\(\sqrt{2}\).} 复数的模.
+		\end{easonproblem}
+
+		\begin{easonproblem}
+			设\(z \in \CC\), \(f(z) = z^n (n \in \NN^{*})\), \(f(1+i)\)取最小正整数时, \(n = \)?.
+			\subproblem
+			\answord{\(8\).} 复数的整数指数幂.
+		\end{easonproblem}
+
+		\begin{easonproblem}
+			已知\(z \in \CC\)满足\(z \cdot \overline{z} + 2 i z = 9 + 2i\), 则\(z = \)?.
+			\subproblem
+			\answord{\(1 - 2i \lgor 1 + 4i\).} 复数的共轭关系.
+		\end{easonproblem}
+
+		\begin{easonproblem}
+			下列命题中, 正确的是:
+			\begin{enumerate}[label=\calword{(\arabic*)}]
+				\item 任意两个确定的复数都不能比较大小;
+    			\item 若\(\abs{z} \leq 1\), 则\(-1 \leq z \leq 1\);
+       			\item 若\(z_1^2 + z_2^2 = 0,\) 则\(z_1 = z_2 = 0\);
+          		\item \(z + \overline{z} = 0 \Leftrightarrow z \in \II \setminus \left\{0\right\}\);
+           		\item \(z = \overline{z} \Leftrightarrow z \in \RR\).
+			\end{enumerate}
+			\subproblem
+			\answord{\calword{(5)}.} 复数的模; 复数的共轭关系.
+
+			\athword{作者的话.} 作者将原题中的 “纯虚数” 翻译为了\(\II \setminus \left\{0\right\}\). 但是, 有部分书籍定义\defword{纯虚数 (pure imaginary / complex number)}为集合\(\II = \left\{z|\Re(z) = 0\right\}\).\cite{zeroisimg}
+		\end{easonproblem}
+
+		\begin{easonbigproblem}
+			设关于\(z \in \CC\)满足\(\arg z \in \displaystyle \left(\frac{3}{4} \pi, \pi\right)\), 则\(\displaystyle \frac{2021}{\overline{z^2}}\)对应复平面上的点位于第?象限.
+			\subbigproblem
+			\answord{四.} 复数的辐角; 复数的共轭关系; 复平面.
+			\begin{align}
+				\arg z \in \left(\frac{3}{4} \pi, \pi\right) &\Rightarrow \arg \overline{z} \in \left(-\pi, -\frac{3}{4} \pi\right)\\
+				&\Rightarrow \arg \overline{z} \in \left(\pi, \frac{5}{4} \pi\right)\\
+				&\Rightarrow \arg \overline{z}^2 \in \left(2\pi, \frac{5}{2} \pi\right)\\
+				&\Rightarrow \arg \overline{z}^2 \in \left(0, \frac{1}{2} \pi\right)\\
+				&\Rightarrow \arg \overline{z}^{-2} \in \left(-\frac{1}{2} \pi, 0\right)\\
+				&\Rightarrow \arg{\frac{2021}{\overline{z^2}}} \in \left(-\frac{1}{2} \pi, 0\right).
+			\end{align}
+		\end{easonbigproblem}
+
+		\begin{easonbigproblem}
+			若在\(\RR_2[x]\)上的多项式\(x^2 - \abs{z} \cdot x + 1, z\in \CC\)有实数根, 则\(\abs{z-1+i}\)的最小值为?,
+			\subbigproblem
+			\answord{\(2 - \sqrt{2}\).} \(\PP_2[x]\)上的多项式的根; 复数的模; 一元二次方程根的判别式; 三角不等式.
+
+			由题意有\(\Delta = \abs{z}^2 - 4 \geq 0\)解得\(\abs{z} \geq 2\).
+
+			再由\(\abs{z-1+i} \geq \abs{z} - \abs{-1+i} = 2 - \sqrt{2}\)可知最小值.
+		\end{easonbigproblem}
+
+		\begin{easonbigproblem}
+			若关于\(x\)的方程\(2x^2 + 3ax + a^2 - a = 0\)至少有一个根的模为\(1\), 则实数\(a = \)?.
+			\subbigproblem
+			\answord{\(2 \pm \sqrt{2} \lgor -1\).} \(\PP_2[x]\)上的多项式的根; 一元二次方程根的判别式; 复数的模.
+		
+			考虑\(\Delta \geq 0\), 不妨设\(\abs{x_1} = 1\). 若\(x_1 = 1\), 则\(a^2 + 2a + 2 = 0\), \(a \notin \RR\); 若\(x_1 = -1\), 则\(a^2 - 4a + 2 = 0\), \(a = 2 \pm \sqrt{2}\).
+
+			考虑\(\Delta < 0\), 有\(x_1 = \overline{x_2}, x_1 \cdot x_2 = \abs{x_1}^2 = 1\), 即\(\displaystyle \frac{a^2 - a}{2} = 1\), 有\(a = 2 \lgor a = -1\), 又\(\Delta < 0\)有\(a = -1\).
+		\end{easonbigproblem}
+
+	\section{解答题}
+		\begin{easonproblem}
+			已知\(z = bi, b \in \RR, \displaystyle \frac{z-2}{1+i} \in \RR\),
+			\begin{enumerate}[label = \calword{(\arabic*)}]
+				\item 求\(z\);
+    			\item 若\((m+z)^2\)在第一象限, 求\(m\).
+			\end{enumerate}
+			\subproblem
+			\answord{\(z = -2i; m \in (-\infty, -2)\).} 复数的实部和虚部; 复平面.
+		\end{easonproblem}
+
+		\begin{easonbigproblem}
+			已知\(\alpha, \beta\)是\(\RR_2[x]\)上的多项式\(x^2 + 2x + p\)的两根,
+			\begin{enumerate}[label = \calword{(\arabic*)}]
+				\item 若\(\abs{\alpha - \beta} = 3\), 求\(p\);
+    			\item 求\(\abs{\alpha} + \abs{\beta}\).
+			\end{enumerate}
+			\subbigproblem
+			\answord{\(p = \displaystyle -\frac{5}{4} \lgor \frac{13}{4};\) 第二问见过程.} 复数的实部和虚部; \(\PP_2[x]\)上的多项式的根; \(\PP[x]\)上的多项式的根的Vieta定理.
+
+			\begin{enumerate}[label = \calword{(\arabic*)}]
+				\item 	\(\Delta = 4 - 4p,\)
+					\begin{enumerate}[label = \calword{(1.\arabic*)}]
+						\item	\(\Delta \geq 0, p \leq 1\), 此时有
+							\begin{displaymath}
+								\sqrt{4-4p} = 3 \Rightarrow p = -\frac{5}{4}.
+							\end{displaymath}
+						\item	\(\Delta < 0, p > 1\), 此时有
+							\begin{displaymath}
+								\abs{\sqrt{4p-4}i} = 3 \Rightarrow p = \frac{13}{4}.
+							\end{displaymath}
+					\end{enumerate}	
+				\item  	\(\Delta = 4 - 4p,\)
+					\begin{enumerate}[label = \calword{(2.\arabic*)}]
+						\item	\(\Delta \geq 0, p \leq 1\), 此时有
+							\begin{displaymath}
+								\abs{\alpha} + \abs{\beta} = \abs{-1 + \sqrt{1-p}} + \abs{-1 - \sqrt{1-p}}.
+							\end{displaymath}
+
+							\begin{enumerate}[label = \calword{(2.1.\arabic*)}]
+								\item \(\sqrt{1-p} \in [0, 1], p \in [0, 1]\), 此时有
+								\begin{displaymath}
+									\abs{\alpha} + \abs{\beta} = 1 - \sqrt{1-p} + 1 + \sqrt{1-p} = 2;
+								\end{displaymath}
+								\item \(\sqrt{1-p} \in (1, +\infty), p \in (-\infty, 0)\), 此时有
+									\begin{displaymath}
+										\abs{\alpha} + \abs{\beta} = -1 + \sqrt{1-p} + 1 + \sqrt{1-p} = 2 \sqrt{1-p}.
+									\end{displaymath}
+							\end{enumerate}
+
+						\item	\(\Delta < 0, p > 1\), 此时设\(\alpha = x + yi, \beta = x - yi, x, y \in \RR\), 于是有
+							\begin{displaymath}
+								\abs{\alpha} + \abs{\beta} = 2\sqrt{m^2 + n^2},
+							\end{displaymath}
+							又有\(p = \alpha \cdot \beta = m^2 + n^2\), 有
+							\begin{displaymath}
+								\abs{\alpha + \beta} = 2\sqrt{p}.
+							\end{displaymath}
+					\end{enumerate}
+
+					综上所述,
+					\begin{displaymath}
+						\abs{\alpha} + \abs{\beta} = \left\{
+							\begin{array}{lcr}
+								2\sqrt{p} & \text{for} & p \in (1, +\infty)\\
+								2 & \text{for} & p \in [0, 1]\\
+								2\sqrt{1-p} & \text{for} & p \in (-\infty, 0)
+							\end{array}
+						\right.
+					\end{displaymath}
+
+			\end{enumerate}
+			
+		\end{easonbigproblem}
+
+		\begin{easonbigproblem}
+			设虚数\(z\)满足\(\abs{2z+3} = \sqrt{3} \abs{\overline{z} + 2}\),
+			\begin{enumerate}[label = \calword{(\arabic*)}]
+				\item 求证: \(\abs{z}\)是定值;
+    			\item 是否存在实数\(k\), 使\(\displaystyle \frac{z}{k} + \frac{k}{z}\)为实数?
+			\end{enumerate}
+			\subbigproblem
+			\answord{略; 存在, \(k = \pm \sqrt{3}\).} 复数的实部和虚部; 复数的共轭关系; 复数的模.
+			\begin{enumerate}[label = \calword{(\arabic*)}]
+				\item 设\(z = x + yi, x, y \in \RR, y \neq 0\), 于是有\(\abs{(2x+3) + 2yi} = \sqrt{3} \abs{(x+2) - yi}\), 故有\(x^2 + y^2 = 3\), 即\(\abs{z} = \sqrt{3}\).
+				\item 
+					\begin{align}
+						\frac{z}{k} + \frac{k}{z} &= \frac{x+yi}{k} + \frac{k}{x+yi}\\
+						&= \frac{x+yi}{k} + \frac{k(x-yi)}{(x+yi)(x-yi)}\\
+						&= \frac{x+yi}{k} + \frac{k(x-yi)}{3}\\
+						&= \left(\frac{x}{k} + \frac{kx}{3}\right) + \left(\frac{y}{k} - \frac{ky}{3}\right)i \in \RR,
+					\end{align}
+					故有
+					\begin{displaymath}
+						\frac{y}{k} - \frac{ky}{3} = 0,
+					\end{displaymath}
+					于是有\(k = \pm \sqrt{3}\).
+			\end{enumerate}
+		\end{easonbigproblem}
+
+	\section{附加题}
+		\begin{easonbigproblem}
+			设\(z \in \CC, \abs{z} = 1, \displaystyle \frac{5}{2} z^2 - 2z + \frac{1}{z} \in \RR\), 求\(z\).
+			\subbigproblem
+			\answord{\(z = \displaystyle \frac{3}{5} \pm \frac{4}{5} i \lgor z = \pm 1\).} 复数的实部和虚部; 复数的模; 复数的整数指数幂.
+
+			设\(z = a + bi, a, b \in \RR\), 显然有\(a^2 + b^2 = 1\), 于是有
+			\begin{displaymath}
+				5ab - 2b - \frac{b}{a^2 + b^2} = 0,
+			\end{displaymath}
+			于是有
+			\begin{displaymath}
+				5ab - 3b = 0,
+			\end{displaymath}
+			联立\(a^2 + b^2 = 1\), 解得\(\displaystyle (a, b) = \left(\frac{3}{5}, \frac{4}{5}\right) \lgor \left(\frac{3}{5}, -\frac{4}{5}\right) \lgor (1, 0) \lgor (-1, 0)\), 即\(z = \displaystyle \frac{3}{5} \pm \frac{4}{5} i \lgor z = \pm 1\).
+		\end{easonbigproblem}
+
+	\newpage
+	
+	\bibliography{ref}
+	\bibliographystyle{plain}
+
+\end{document}
