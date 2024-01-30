@@ -1,4 +1,4 @@
-# Maths_Error
+# Maths-Error
 
 By EasonSYC
 
