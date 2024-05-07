@@ -1,6 +1,6 @@
 # Maths Error
 
-By EasonSYC
+By Eason Shao
 
 This is a project of my Maths Errors whilst studying in China.
 
